@@ -23,5 +23,5 @@ Ofrecer la posibilidad de comprar y vender productos de segunda mano entre uuari
 
 +Utilización de una [API de Cloud Storage](https://firebase.google.com/docs/storage) de Firebase para la subida y almacenamiento de imagenes.
 
-+Chat entre comprador interesado y vendedor
++Chat entre comprador interesado y vendedor.
 
