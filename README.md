@@ -8,7 +8,7 @@ Plataforma dedicada a la compra venta de productos de segunda mano entre usuario
 
 ## Funcionalidad principal de la aplicación
 
-Ofrecer la posibilidad de comprar y vender productos de segunda mano entre uuarios, en base a su proximidad mediante el uso de la gelocalización.
+Ofrecer la posibilidad de comprar y vender productos de segunda mano entre uuarios, en base a su proximidad mediante el uso de la gelocalización
 
 ## Objetivos generales
 
