@@ -20,7 +20,7 @@
 
         <input type="hidden" name="user_id" id="user_id" value="{{ $usuario->id }}">
 
-        {{-- <div class="mb-6">
+        <div class="mb-6">
             <label for="categoria_id"
                 class="text-sm font-medium text-gray-900 block mb-2 @error('categoria_id') text-red-500 @enderror">
                 Categoria
@@ -34,7 +34,7 @@
                 </p>
             @enderror
         </div>
- --}}
+
         <div class="mb-6">
             <label for="precio"
                 class="text-sm font-medium text-gray-900 block mb-2 @error('precio') text-red-500 @enderror">
