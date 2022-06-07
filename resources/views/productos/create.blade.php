@@ -50,7 +50,7 @@
             @enderror
         </div>
 
-        {{-- <div class="mb-6">
+        <div class="mb-6">
             <label for="estado_id"
                 class="text-sm font-medium text-gray-900 block mb-2 @error('estado_id') text-red-500 @enderror">
                 Estado
@@ -63,9 +63,9 @@
                     {{ $message }}
                 </p>
             @enderror
-        </div> --}}
+        </div>
 
-        {{-- <div class="mb-6">
+        <div class="mb-6">
             <label for="descripcion"
                 class="text-sm font-medium text-gray-900 block mb-2 @error('descripcion') text-red-500 @enderror">
                 Descripcion
@@ -79,7 +79,7 @@
                     {{ $message }}
                 </p>
             @enderror
-        </div> --}}
+        </div>
         <button type="submit"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Enviar</button>
     </form>
