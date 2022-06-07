@@ -45,7 +45,9 @@ class ProductoController extends Controller
     public function store(StoreProductoRequest $request)
     {
         $validados = $request->validated();
+        //dd($validados);
         $producto = new Producto($validados);
+        //dd($producto);
         $producto->save();
 
         return redirect()->route('usuarios');
@@ -58,12 +60,12 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    /* public function show(Producto $producto)
+    public function show(Producto $producto)
     {
         return view('productos.show', [
             'producto' => $producto
         ]);
-    } */
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -71,7 +73,7 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    /* public function edit(Producto $producto)
+    public function edit(Producto $producto)
     {
         $usuario = Auth::user();
 
@@ -79,7 +81,7 @@ class ProductoController extends Controller
             'producto' => $producto,
             'usuario' => $usuario
         ]);
-    } */
+    }
 
     /**
      * Update the specified resource in storage.
@@ -90,7 +92,15 @@ class ProductoController extends Controller
      */
     public function update(UpdateProductoRequest $request, Producto $producto)
     {
-        //
+        $validados = $request->validated();
+        $producto->nombre = $validados['nombre'];
+        $producto->categoria_id = $validados['categoria_id'];
+        $producto->precio = $validados['precio'];
+        $producto->estado_id = $validados['estado_id'];
+        $producto->descripcion = $validados['descripcion'];
+
+        $producto->save();
+        return redirect()->route('usuarios');
     }
 
     /**
