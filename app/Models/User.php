@@ -46,4 +46,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Producto::class);
     }
+
+    public function chats()
+    {
+        return $this->hasMany(Chat::class);
+    }
+
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class);
+    }
 }

@@ -22,9 +22,9 @@ return new class extends Migration
             $table->foreignId('estado_id')->constrained('estados');
             $table->string('descripcion', 255);
             //añadir etiquetas
-            $table->boolean('reservado');
-            $table->boolean('envio');
-            $table->boolean('vendido');
+            $table->boolean('reservado')->nullable();
+            $table->boolean('envio')->nullable();
+            $table->boolean('vendido')->nullable();
             //añadir fotos
             //añadir ubicacion
             $table->timestamps();
