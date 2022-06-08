@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('vendedor_id')->constrained('users');
+            $table->foreignId('comprador_id')->constrained('users');
+            $table->foreignId('producto_id')->constrained('productos');
             $table->timestamps();
         });
     }
