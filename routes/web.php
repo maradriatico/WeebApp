@@ -27,6 +27,7 @@ Route::get('/dashboard', function () {
 Route::resource('user', UserController::class)->middleware(['auth']);
 
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
+//Route::post('/productos/busqueda', [ProductosController::class, 'index'] )->name('busqueda');
 
 Route::get('/usser', User::class);
 

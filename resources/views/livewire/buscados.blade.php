@@ -2,7 +2,7 @@
     @foreach ($productos as $prod)
         <div class="bg-orange-200 item col-xs-4 col-lg-4 m-2">
             <div class="thumbnail p-3">
-                <img class="h-52 " src="image.jpg" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
+                <img class="group list-group-image h-52 " src="image.png" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
                 <div>
                     <b>{{ $prod->precio }} €</b>
                     <div class="flex justify-between">
