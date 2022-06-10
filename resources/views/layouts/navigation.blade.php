@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-orange-300 border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -6,19 +6,55 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                        <img class="block h-10 w-auto fill-current" src="logo.jpg" alt="Logo">
+                        {{-- <x-application-logo class="block h-10 w-auto fill-current text-gray-600" /> --}}
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    {{-- <x-nav-link :href="route('productos')" :active="request()->routeIs('productos')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
                         {{ __('Mis Productos') }}
-                    </x-nav-link> --}}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
+                        {{ __('Chats') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" class="font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 bg-orange-200">
+                        {{ __('¡Sube tu producto!') }}
+                    </x-nav-link>
                 </div>
+
+                <div>
+                    <form action="{{ route('busqueda', [], false) }}" method="POST">
+                        @method('POST')
+                        <input type="text" name="patata" id="patata">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+                <!-- Buscador -->
+            <div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end">
+                <div class="max-w-lg w-full lg:max-w-xs">
+                  <label for="search">Search </label>
+                  <form action="{{ route('busqueda', [], false) }}" method="POST">
+                    @method('POST')
+                    <button type="submit" >
+                      <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                      </svg>
+                    </button>
+                        <input type="text" name="s" id="s" class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-orange-200 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out" placeholder="Busca tu producto"/>
+                        <button type="submit">Enviar</button>
+                  </form>
+                </div>
+            </div>
+            <div>
+                <form action="{{ route('busqueda', [], false) }}" method="POST">
+                    @method('POST')
+                    <input type="text" name="patata" id="patata">
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
 
             <!-- Settings Dropdown -->
@@ -38,13 +74,18 @@
 
                     <x-slot name="content">
                         <!-- Authentication -->
+                        <x-dropdown-link :href="route('logout')">
+                                {{ __('Mi Perfil') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('logout')">
+                                {{ __('Ajustes') }}
+                        </x-dropdown-link>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Cerrar Sesion') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -66,20 +107,26 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
+                {{ __('Mis Productos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
+                {{ __('Chats') }}
             </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
+            <a href=""><div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
+            </div></a>
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
+                <x-responsive-nav-link :href="route('logout')">
+                    {{ __('Ajustes') }}
+                </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 

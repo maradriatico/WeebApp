@@ -17,8 +17,13 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $parm = request('s');
+        $productos = Producto::where('nombre', 'like', "%$parm%")->get();
+        return view('productos.index', [
+            'productos' => $productos,
+        ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -112,7 +117,7 @@ class ProductoController extends Controller
     public function destroy(Producto $producto)
     {
         $producto->delete();
-        
+
         return redirect()->route('usuarios');
     }
 }
