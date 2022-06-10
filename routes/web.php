@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('users.index');
 });
 
 Route::get('/dashboard', function () {
@@ -27,9 +27,8 @@ Route::get('/dashboard', function () {
 Route::resource('user', UserController::class)->middleware(['auth']);
 
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
-//Route::post('/productos/busqueda', [ProductosController::class, 'index'] )->name('busqueda');
 
-Route::get('/usser', User::class);
+//Route::get('/usser', User::class);
 
 
 require __DIR__.'/auth.php';
