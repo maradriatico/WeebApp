@@ -55,7 +55,7 @@ class ProductoController extends Controller
         //dd($producto);
         $producto->save();
 
-        return redirect()->route('usuarios');
+        return redirect()->route('user.index');
 
     }
 
@@ -105,7 +105,7 @@ class ProductoController extends Controller
         $producto->descripcion = $validados['descripcion'];
 
         $producto->save();
-        return redirect()->route('usuarios');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -118,6 +118,6 @@ class ProductoController extends Controller
     {
         $producto->delete();
 
-        return redirect()->route('usuarios');
+        return redirect()->route('user.index');
     }
 }

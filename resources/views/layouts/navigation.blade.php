@@ -74,10 +74,10 @@
 
                     <x-slot name="content">
                         <!-- Authentication -->
-                        <x-dropdown-link :href="route('logout')">
+                        <x-dropdown-link :href="route('user')">
                                 {{ __('Mi Perfil') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('logout')">
+                        <x-dropdown-link :href="route('user')">
                                 {{ __('Ajustes') }}
                         </x-dropdown-link>
                         <form method="POST" action="{{ route('logout') }}">
@@ -107,7 +107,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
+            <x-responsive-nav-link :href="route('user')" :active="request()->routeIs('productos')">
                 {{ __('Mis Productos') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
@@ -124,12 +124,11 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
-                <x-responsive-nav-link :href="route('logout')">
+                <x-responsive-nav-link :href="route('user')">
                     {{ __('Ajustes') }}
                 </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
