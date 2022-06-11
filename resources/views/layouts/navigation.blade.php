@@ -110,6 +110,7 @@
             <x-responsive-nav-link :href="route('user')" :active="request()->routeIs('productos')">
                 {{ __('Mis Productos') }}
             </x-responsive-nav-link>
+            
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('productos')">
                 {{ __('Chats') }}
             </x-responsive-nav-link>
