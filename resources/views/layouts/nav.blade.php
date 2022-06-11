@@ -67,10 +67,10 @@ x-data="{open:false,menu:false, lokasi:false}">
 
                 <x-slot name="content">
                     <!-- Authentication -->
-                    <x-dropdown-link :href="route('logout')">
+                    <x-dropdown-link :href="route('user.index')">
                             {{ __('Mi Perfil') }}
                     </x-dropdown-link>
-                    <x-dropdown-link :href="route('logout')">
+                    <x-dropdown-link :href="route('user.index')">
                             {{ __('Ajustes') }}
                     </x-dropdown-link>
                     <form method="POST" action="{{ route('logout') }}">
@@ -97,13 +97,13 @@ x-data="{open:false,menu:false, lokasi:false}">
     </div>
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')">
+            <x-responsive-nav-link :href="route('user.index')">
                 {{ __('Mis Productos') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('productos.create')">
                 {{ __('¡Sube tu producto!') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')">
+            <x-responsive-nav-link :href="route('user.index')">
                 {{ __('Chats') }}
             </x-responsive-nav-link>
         </div>
