@@ -17,14 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.index');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('user', UserController::class)->middleware(['auth']);
+Route::resource('user', UserController::class)
+->middleware(['auth']);
 
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
 
