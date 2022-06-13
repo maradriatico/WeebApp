@@ -7,8 +7,8 @@ x-data="{open:false,menu:false, lokasi:false}">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center px-2 lg:px-0">
           <a class="flex-shrink-0" href="#">
-            <img class="block lg:hidden h-12 w-16" src="logo.jpg" alt="Logo">
-            <img class="hidden lg:block h-12 w-auto" src="logo.jpg" alt="Logo">
+            <img class="block lg:hidden h-12 w-16" src="{{ asset('logo.jpeg')}}" alt="Logo">
+            <img class="hidden lg:block h-16 w-auto" src="{{ asset('logo.jpeg')}}" alt="Logo">
           </a>
           <div class="hidden lg:block lg:ml-2">
             <div class="flex">
