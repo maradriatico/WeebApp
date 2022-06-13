@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductoRequest;
 use App\Http\Requests\UpdateProductoRequest;
+use App\Models\Categoria;
+use App\Models\Estado;
 use App\Models\Producto;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -34,10 +36,14 @@ class ProductoController extends Controller
     {
         $usuario = Auth::user($user);
         $producto = new Producto();
+        $categorias = Categoria::all();
+        $estados = Estado::all();
 
         return view('productos.create', [
             'producto' => $producto,
             'usuario' => $usuario,
+            'categorias' => $categorias,
+            'estados' => $estados
         ]);
     }
 
@@ -81,10 +87,16 @@ class ProductoController extends Controller
     public function edit(Producto $producto)
     {
         $usuario = Auth::user();
+        $categorias = Categoria::all();
+        $estados = Estado::all();
+
+
 
         return view('productos.edit', [
             'producto' => $producto,
-            'usuario' => $usuario
+            'usuario' => $usuario,
+            'categorias' => $categorias,
+            'estados' => $estados
         ]);
     }
 
