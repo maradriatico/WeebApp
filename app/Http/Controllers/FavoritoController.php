@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFavoritoRequest;
 use App\Http\Requests\UpdateFavoritoRequest;
 use App\Models\Favorito;
+use App\Models\Producto;
+use Illuminate\Support\Facades\Auth;
 
 class FavoritoController extends Controller
 {
@@ -15,7 +17,11 @@ class FavoritoController extends Controller
      */
     public function index()
     {
-        //
+        return view('users.favs', [
+            'productos' => Auth::user()->favoritos,
+            'perfil' => Auth::user(),
+        ]);
+
     }
 
     /**
@@ -23,54 +29,13 @@ class FavoritoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Producto $producto)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreFavoritoRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreFavoritoRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Favorito $favorito)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Favorito $favorito)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateFavoritoRequest  $request
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateFavoritoRequest $request, Favorito $favorito)
-    {
-        //
+        $favorito = new Favorito();
+        $favorito->user_id = Auth::user()->id;
+        $favorito->producto_id = $producto->id;
+        $favorito->save();
+        return redirect()->back();
     }
 
     /**
@@ -81,6 +46,7 @@ class FavoritoController extends Controller
      */
     public function destroy(Favorito $favorito)
     {
-        //
+        $favorito->delete();
+        return redirect()->back();
     }
 }

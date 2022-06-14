@@ -14,6 +14,11 @@ class Producto extends Model
     public $fillable = ['nombre', 'precio', 'descripcion',
                         'categoria_id', 'estado_id', 'user_id'];
 
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class);
+    }
+
     public function categoria()
     {
         return $this->belongsTo(Categoria::class, 'categoria_id');

@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\FavoritoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
 use App\Http\Livewire\User;
+use App\Models\Favorito;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,10 @@ Route::get('/dashboard', function () {
 
 Route::resource('user', UserController::class)
 ->middleware(['auth']);
+
+Route::get('/favoritos/create/{producto}', [FavoritoController::class, 'create'])->middleware(['auth']);
+
+Route::resource('favoritos', FavoritoController::class)->middleware(['auth']);
 
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
 
