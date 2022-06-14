@@ -103,6 +103,9 @@ x-data="{open:false,menu:false, lokasi:false}">
             <x-responsive-nav-link :href="route('productos.create')">
                 {{ __('¡Sube tu producto!') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('favoritos.index')">
+                {{ __('Favoritos') }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('user.index')">
                 {{ __('Chats') }}
             </x-responsive-nav-link>

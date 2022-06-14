@@ -1,5 +1,6 @@
 <div class="row flex flex-wrap">
     @foreach ($productos as $article)
+    <a href="{{route('productos.show', $article->id)}}">
         <div class="bg-orange-200 item col-xs-4 col-lg-4">
             <div class="thumbnail p-3">
                 <img class="group list-group-image h-52 " src="{{asset('image.png')}}" {{-- src="{{ $article->image }}" --}} alt="No hay na" />
@@ -25,5 +26,6 @@
 
                 </div>
         </div>
+    </a>
     @endforeach
 </div>
