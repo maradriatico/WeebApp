@@ -11,4 +11,14 @@ class Favorito extends Model
 
     protected $table = 'favoritos';
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function producto()
+    {
+        return $this->belongsTo(Producto::class, 'producto_id');
+    }
+
 }

@@ -1152,7 +1152,11 @@ select {
 }
 .pt-1 {
   padding-top: 0.25rem;
+
+.pl-4 {
+  padding-left: 1rem;
 }
+
 .text-left {
   text-align: left;
 }
