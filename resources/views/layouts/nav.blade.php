@@ -113,14 +113,14 @@ x-data="{open:false,menu:false, lokasi:false}">
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <a href=""><div class="px-4">
+            <a href="{{route('user.index')}}"><div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div></a>
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
-                <x-responsive-nav-link :href="route('logout')">
+                <x-responsive-nav-link :href="route('user.index')">
                     {{ __('Ajustes') }}
                 </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">
