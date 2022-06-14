@@ -130,6 +130,6 @@ class ProductoController extends Controller
     {
         $producto->delete();
 
-        return redirect()->route('user.index');
+        return redirect()->back()->with('success', 'Producto eliminado');
     }
 }
