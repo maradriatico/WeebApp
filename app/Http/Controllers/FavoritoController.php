@@ -35,7 +35,7 @@ class FavoritoController extends Controller
         $favorito->user_id = Auth::user()->id;
         $favorito->producto_id = $producto->id;
         $favorito->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Producto añadido a Favoritos');
     }
 
     /**
@@ -47,6 +47,7 @@ class FavoritoController extends Controller
     public function destroy(Favorito $favorito)
     {
         $favorito->delete();
-        return redirect()->back();
+
+        return redirect()->back()->with('success', 'Producto eliminado de Favoritos');
     }
 }

@@ -5,15 +5,15 @@
         <div class="carousel-inner">
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
             <div class="carousel-item">
-                <img src="http://fakeimg.pl/500x400/0079D8/fff/?text=Without">
+                <img src="http://fakeimg.pl/500x400/0079D8/fff/?text=Imagen1">
             </div>
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
-                <img src="http://fakeimg.pl/500x400/DA5930/fff/?text=JavaScript">
+                <img src="http://fakeimg.pl/500x400/DA5930/fff/?text=Imagen2">
             </div>
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item">
-                <img src="http://fakeimg.pl/500x400/F90/fff/?text=Carousel">
+                <img src="http://fakeimg.pl/500x400/F90/fff/?text=Imagen3">
             </div>
             <label for="carousel-3" class="carousel-control prev control-1">‹</label>
             <label for="carousel-2" class="carousel-control next control-1">›</label>
@@ -38,9 +38,9 @@
             <div class="flex">
                 <a href="#" class="px-3 py-2 rounded-md text-sm bg-orange-500 leading-5 font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Chats </a>
 
-                <div class="font-semibold text-4xl"><svg class="h-8 w-8 text-red-500"   fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="font-semibold text-4xl"><a href={{'/favoritos/create/' . $producto->id}}><svg class="h-8 w-8 text-red-500"   fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                  </svg></div>
+                  </svg></a></div>
             </div>
             <div class="font-semibold text-3xl right">{{$producto->nombre}}</div>
             <div class="font-semibold text-2xl">{{$producto->precio}}€</div>

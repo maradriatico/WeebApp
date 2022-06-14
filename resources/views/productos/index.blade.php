@@ -15,7 +15,6 @@
                 @endif
                 @livewire('buscados', ['productos'=>$productos])
 
-
             </div>
         </div>
     </div>

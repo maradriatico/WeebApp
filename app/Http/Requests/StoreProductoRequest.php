@@ -24,7 +24,7 @@ class StoreProductoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' => 'required|string|max:30',
+            'nombre' => 'required|string|max:15',
             'user_id' => 'required|exists:users,id',
             'categoria_id' => 'required|exists:categorias,id',
             'estado_id' => 'required|exists:estados,id',

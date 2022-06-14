@@ -1,9 +1,9 @@
-<div class="row flex flex-row p-3">
+<div class="row flex flex-wrap">
     @foreach ($productos as $prod)
         <a href="{{route('productos.show', $prod->id)}}">
             <div class="bg-orange-200 item col-xs-4 col-lg-4 m-2">
                 <div class="thumbnail p-3">
-                    <img class="group list-group-image h-52 " src="{{asset('image.png')}}" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
+                    <img class="h-52 " src="{{asset('image.png')}}" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
                     <div class="flex justify-between">
                         <b class="mt-1">{{ $prod->precio }} €</b>
                         <div class="mr-1">
@@ -12,11 +12,11 @@
                               </svg>
                         </div>
                     </div>
-                    <div>
-                        <div class="text-left">
-                            <p>{{ $prod->nombre }}</p>
-                        </div>
+
+                    <div class="text-left">
+                        <p>{{ $prod->nombre }}</p>
                     </div>
+
                 </div>
             </div>
         </a>

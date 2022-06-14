@@ -61,7 +61,7 @@ class ProductoController extends Controller
         //dd($producto);
         $producto->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Producto creado con éxito');
 
     }
 
@@ -117,7 +117,7 @@ class ProductoController extends Controller
         $producto->descripcion = $validados['descripcion'];
 
         $producto->save();
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Producto actualizado con éxito');
     }
 
     /**
