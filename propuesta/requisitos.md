@@ -8,7 +8,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [1](https://github.com/maradriatico/WeebApp/issues/1) |
 
 | **R2**     | **Código fuente**         |
 | --------------: | :------------------- |
@@ -17,7 +17,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [2](https://github.com/maradriatico/WeebApp/issues/2) |
 
 | **R3**     | **Estilo del código**         |
 | --------------: | :------------------- |
@@ -26,7 +26,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [3](https://github.com/maradriatico/WeebApp/issues/3) |
 
 | **R4**     | **Tres lanzamientos**         |
 | --------------: | :------------------- |
@@ -35,7 +35,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [4](https://github.com/maradriatico/WeebApp/issues/4) |
 
 | **R5**     | **README.md**         |
 | --------------: | :------------------- |
@@ -44,7 +44,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [5](https://github.com/maradriatico/WeebApp/issues/5) |
 
 | **R6**     | **Documentación**         |
 | --------------: | :------------------- |
@@ -53,7 +53,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [6](https://github.com/maradriatico/WeebApp/issues/6) |
 
 | **R7**     | **Incidencias en GitHub**         |
 | --------------: | :------------------- |
@@ -62,7 +62,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [7](https://github.com/maradriatico/WeebApp/issues/7) |
 
 | **R8**     | **Etiquetas e hitos**         |
 | --------------: | :------------------- |
@@ -71,7 +71,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [8](https://github.com/maradriatico/WeebApp/issues/8) |
 
 | **R9**     | **Rama master**         |
 | --------------: | :------------------- |
@@ -80,7 +80,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [9](https://github.com/maradriatico/WeebApp/issues/9) |
 
 | **R10**     | **Gestión del proyecto**         |
 | --------------: | :------------------- |
@@ -89,7 +89,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [10](https://github.com/maradriatico/WeebApp/issues/10) |
 
 | **R11**     | **Final de cada iteración**         |
 | --------------: | :------------------- |
@@ -98,7 +98,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [11](https://github.com/maradriatico/WeebApp/issues/11) |
 
 | **R12**     | **Validación de formularios**         |
 | --------------: | :------------------- |
@@ -107,7 +107,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [12](https://github.com/maradriatico/WeebApp/issues/12) |
 
 | **R13**     | **Gestión de ventanas**         |
 | --------------: | :------------------- |
@@ -116,7 +116,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [13](https://github.com/maradriatico/WeebApp/issues/13) |
 
 | **R14**     | **Manejo de eventos**         |
 | --------------: | :------------------- |
@@ -125,7 +125,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [14](https://github.com/maradriatico/WeebApp/issues/14) |
 
 | **R15**     | **DOM**         |
 | --------------: | :------------------- |
@@ -134,7 +134,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [15](https://github.com/maradriatico/WeebApp/issues/15) |
 
 | **R16**     | **Almacenamiento en el lado del cliente**         |
 | --------------: | :------------------- |
@@ -143,7 +143,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [16](https://github.com/maradriatico/WeebApp/issues/16) |
 
 | **R17**     | **Alpine.js**         |
 | --------------: | :------------------- |
@@ -152,7 +152,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [17](https://github.com/maradriatico/WeebApp/issues/17) |
 
 | **R18**     | **Utilización de AJAX**         |
 | --------------: | :------------------- |
@@ -161,7 +161,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [18](https://github.com/maradriatico/WeebApp/issues/18) |
 
 | **R19**     | **ECMAScript2015 (ES6)**         |
 | --------------: | :------------------- |
@@ -170,7 +170,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [19](https://github.com/maradriatico/WeebApp/issues/19) |
 
 | **R20**     | **PHP**         |
 | --------------: | :------------------- |
@@ -179,7 +179,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [20](https://github.com/maradriatico/WeebApp/issues/20) |
 
 | **R21**     | **Laravel Framework**         |
 | --------------: | :------------------- |
@@ -188,7 +188,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [21](https://github.com/maradriatico/WeebApp/issues/21) |
 
 | **R22**     | **PostgreSQL**         |
 | --------------: | :------------------- |
@@ -197,7 +197,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [22](https://github.com/maradriatico/WeebApp/issues/22) |
 
 | **R23**     | **Cloud computing**         |
 | --------------: | :------------------- |
@@ -206,7 +206,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [23](https://github.com/maradriatico/WeebApp/issues/23) |
 
 | **R24**     | **Pruebas funcionales**         |
 | --------------: | :------------------- |
@@ -215,7 +215,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [24](https://github.com/maradriatico/WeebApp/issues/24) |
 
 | **R25**     | **Aplicación escalable**         |
 | --------------: | :------------------- |
@@ -224,7 +224,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [25](https://github.com/maradriatico/WeebApp/issues/25) |
 
 | **R26**     | **Etiquetas semánticas de HTML5**         |
 | --------------: | :------------------- |
@@ -233,7 +233,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [26](https://github.com/maradriatico/WeebApp/issues/26) |
 
 | **R27**     | **Presentación mediante CSS**         |
 | --------------: | :------------------- |
@@ -242,7 +242,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [27](https://github.com/maradriatico/WeebApp/issues/27) |
 
 | **R28**     | **Diseño flexible**         |
 | --------------: | :------------------- |
@@ -251,7 +251,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [28](https://github.com/maradriatico/WeebApp/issues/28) |
 
 | **R29**     | **Transiciones, transformaciones, animaciones y contenido multimedia**         |
 | --------------: | :------------------- |
@@ -260,7 +260,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [29](https://github.com/maradriatico/WeebApp/issues/29) |
 
 | **R30**     | **Validación HTML5, CSS3 y accesibilidad**         |
 | --------------: | :------------------- |
@@ -269,7 +269,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [30](https://github.com/maradriatico/WeebApp/issues/30) |
 
 | **R31**     | **Diseño para varias resoluciones**         |
 | --------------: | :------------------- |
@@ -278,7 +278,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [31](https://github.com/maradriatico/WeebApp/issues/31) |
 
 | **R32**     | **Varios navegadores**         |
 | --------------: | :------------------- |
@@ -287,7 +287,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [32](https://github.com/maradriatico/WeebApp/issues/32) |
 
 | **R33**     | **Despliegue en un servidor local**         |
 | --------------: | :------------------- |
@@ -296,7 +296,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [33](https://github.com/maradriatico/WeebApp/issues/33) |
 
 | **R34**     | **Acceso desde Cliente Virtual**         |
 | --------------: | :------------------- |
@@ -305,7 +305,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [34](https://github.com/maradriatico/WeebApp/issues/34) |
 
 | **R35**     | **Creación de migraciones**         |
 | --------------: | :------------------- |
@@ -314,7 +314,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [35](https://github.com/maradriatico/WeebApp/issues/35) |
 
 | **R36**     | **Creación de los modelos y sus relaciones**         |
 | --------------: | :------------------- |
@@ -323,7 +323,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [36](https://github.com/maradriatico/WeebApp/issues/36) |
 
 | **R37**     | **Creación de seeders**         |
 | --------------: | :------------------- |
@@ -332,7 +332,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [37](https://github.com/maradriatico/WeebApp/issues/37) |
 
 | **R38**     | **Crear base de datos**         |
 | --------------: | :------------------- |
@@ -341,7 +341,7 @@
 | **Tipo**        | Información                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [38](https://github.com/maradriatico/WeebApp/issues/38) |
 
 | **R39**     | **Añadir usuarios**         |
 | --------------: | :------------------- |
@@ -350,7 +350,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [39](https://github.com/maradriatico/WeebApp/issues/39) |
 
 | **R40**     | **Eliminar usuarios**         |
 | --------------: | :------------------- |
@@ -359,7 +359,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [40](https://github.com/maradriatico/WeebApp/issues/40) |
 
 | **R41**     | **Modificar usuario**         |
 | --------------: | :------------------- |
@@ -368,7 +368,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [41](https://github.com/maradriatico/WeebApp/issues/41) |
 
 | **R42**     | **Registrarse**         |
 | --------------: | :------------------- |
@@ -377,7 +377,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [42](https://github.com/maradriatico/WeebApp/issues/42) |
 
 | **R43**     | **Inicio de sesión**         |
 | --------------: | :------------------- |
@@ -386,7 +386,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [43](https://github.com/maradriatico/WeebApp/issues/43) |
 
 | **R44**     | **Cerrar sesión**         |
 | --------------: | :------------------- |
@@ -395,7 +395,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [44](https://github.com/maradriatico/WeebApp/issues/44) |
 
 | **R45**     | **Modificar datos de usuario**         |
 | --------------: | :------------------- |
@@ -404,7 +404,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [45](https://github.com/maradriatico/WeebApp/issues/45) |
 
 | **R46**     | **Cambiar contraseña**         |
 | --------------: | :------------------- |
@@ -413,7 +413,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [46](https://github.com/maradriatico/WeebApp/issues/46) |
 
 | **R47**     | **Buscar producto**         |
 | --------------: | :------------------- |
@@ -422,7 +422,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [47](https://github.com/maradriatico/WeebApp/issues/47) |
 
 | **R48**     | **Filtrar búsqueda**         |
 | --------------: | :------------------- |
@@ -431,7 +431,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [48](https://github.com/maradriatico/WeebApp/issues/48) |
 
 | **R49**     | **Subir producto**         |
 | --------------: | :------------------- |
@@ -440,7 +440,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [49](https://github.com/maradriatico/WeebApp/issues/49) |
 
 | **R50**     | **Poner precio**         |
 | --------------: | :------------------- |
@@ -449,7 +449,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [50](https://github.com/maradriatico/WeebApp/issues/50) |
 
 | **R51**     | **Tipo de producto**         |
 | --------------: | :------------------- |
@@ -458,7 +458,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [51](https://github.com/maradriatico/WeebApp/issues/51) |
 
 | **R52**     | **Cambiar precio**         |
 | --------------: | :------------------- |
@@ -467,7 +467,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [52](https://github.com/maradriatico/WeebApp/issues/52) |
 
 | **R53**     | **Eliminar producto**         |
 | --------------: | :------------------- |
@@ -476,7 +476,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [53](https://github.com/maradriatico/WeebApp/issues/53) |
 
 | **R54**     | **Añadir descripción**         |
 | --------------: | :------------------- |
@@ -485,7 +485,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [54](https://github.com/maradriatico/WeebApp/issues/54) |
 
 | **R55**     | **Editar producto**         |
 | --------------: | :------------------- |
@@ -494,7 +494,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [55](https://github.com/maradriatico/WeebApp/issues/55) |
 
 | **R56**     | **Chat en tiempo real**         |
 | --------------: | :------------------- |
@@ -503,7 +503,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Difícil         |
 | **Entrega**     | v3             |
-
+| **Incidencia**  | [56](https://github.com/maradriatico/WeebApp/issues/56) |
 
 | **R57**     | **Ver usuario**         |
 | --------------: | :------------------- |
@@ -512,7 +512,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [57](https://github.com/maradriatico/WeebApp/issues/57) |
 
 | **R58**     | **Valorar usuario**         |
 | --------------: | :------------------- |
@@ -521,7 +521,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [58](https://github.com/maradriatico/WeebApp/issues/58) |
 
 | **R59**     | **Marcar producto**         |
 | --------------: | :------------------- |
@@ -530,7 +530,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [59](https://github.com/maradriatico/WeebApp/issues/59) |
 
 | **R60**     | **Añadir foto perfil**         |
 | --------------: | :------------------- |
@@ -539,7 +539,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [60](https://github.com/maradriatico/WeebApp/issues/60) |
 
 | **R61**     | **Hosting en la nube**         |
 | --------------: | :------------------- |
@@ -548,7 +548,7 @@
 | **Tipo**        | Técnico                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [61](https://github.com/maradriatico/WeebApp/issues/61) |
 
 | **R62**     | **Añadir producto al host**         |
 | --------------: | :------------------- |
@@ -557,7 +557,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v1             |
-
+| **Incidencia**  | [62](https://github.com/maradriatico/WeebApp/issues/62) |
 
 | **R63**     | **Modificar producto en el host**         |
 | --------------: | :------------------- |
@@ -566,7 +566,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [63](https://github.com/maradriatico/WeebApp/issues/63) |
 
 | **R64**     | **Eliminar producto del host**         |
 | --------------: | :------------------- |
@@ -575,7 +575,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [64](https://github.com/maradriatico/WeebApp/issues/64) |
 
 | **R65**     | **Añadir fotos producto al host**         |
 | --------------: | :------------------- |
@@ -584,7 +584,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [65](https://github.com/maradriatico/WeebApp/issues/65) |
 
 | **R66**     | **Eliminar fotos de producto del host**         |
 | --------------: | :------------------- |
@@ -593,7 +593,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [66](https://github.com/maradriatico/WeebApp/issues/66) |
 
 | **R67**     | **Modificar fotos de producto del host**         |
 | --------------: | :------------------- |
@@ -602,7 +602,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [67](https://github.com/maradriatico/WeebApp/issues/67) |
 
 | **R68**     | **Geolocalización**         |
 | --------------: | :------------------- |
@@ -611,7 +611,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Difícil         |
 | **Entrega**     | v3             |
-
+| **Incidencia**  | [68](https://github.com/maradriatico/WeebApp/issues/68) |
 
 | **R69**     | **Ver productos cercanos**         |
 | --------------: | :------------------- |
@@ -620,7 +620,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Difícil         |
 | **Entrega**     | v3             |
-
+| **Incidencia**  | [69](https://github.com/maradriatico/WeebApp/issues/69) |
 
 | **R70**     | **Añadir producto a Favoritos**         |
 | --------------: | :------------------- |
@@ -629,7 +629,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [70](https://github.com/maradriatico/WeebApp/issues/70) |
 
 | **R71**     | **Eliminar producto de Favoritos**         |
 | --------------: | :------------------- |
@@ -638,7 +638,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [71](https://github.com/maradriatico/WeebApp/issues/71) |
 
 | **R72**     | **Ver lista Favoritos**         |
 | --------------: | :------------------- |
@@ -647,7 +647,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [72](https://github.com/maradriatico/WeebApp/issues/72) |
 
 | **R73**     | **Crear cuenta Administrador**         |
 | --------------: | :------------------- |
@@ -656,7 +656,7 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [73](https://github.com/maradriatico/WeebApp/issues/73) |
 
 | **R74**     | **Darse de baja**         |
 | --------------: | :------------------- |
@@ -665,84 +665,84 @@
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-
+| **Incidencia**  | [74](https://github.com/maradriatico/WeebApp/issues/74) |
 
 
 ## Cuadro resumen
 
-| **Requisito** | **Prioridad** | **Tipo** | **Complejidad** | **Entrega** |
-| :------------ | :-----------: | :------: | :-------------: | :---------: |
-| (**R1**) Requisitos como incidencias | Mínimo | Técnico | Fácil | v1 | 
-| (**R2**) Código fuente | Mínimo | Técnico | Fácil | v1 | 
-| (**R3**) Estilo del código | Mínimo | Técnico | Fácil | v1 | 
-| (**R4**) Tres lanzamientos | Mínimo | Técnico | Fácil | v1 | 
-| (**R5**) README.md | Mínimo | Técnico | Fácil | v1 | 
-| (**R6**) Documentación | Mínimo | Técnico | Fácil | v1 | 
-| (**R7**) Incidencias en GitHub | Mínimo | Técnico | Fácil | v1 | 
-| (**R8**) Etiquetas e hitos | Mínimo | Técnico | Fácil | v1 | 
-| (**R9**) Rama master | Mínimo | Técnico | Fácil | v1 | 
-| (**R10**) Gestión del proyecto | Mínimo | Técnico | Fácil | v1 | 
-| (**R11**) Final de cada iteración | Mínimo | Técnico | Fácil | v1 | 
-| (**R12**) Validación de formularios | Mínimo | Técnico | Fácil | v1 | 
-| (**R13**) Gestión de ventanas | Mínimo | Técnico | Fácil | v1 | 
-| (**R14**) Manejo de eventos | Mínimo | Técnico | Fácil | v1 | 
-| (**R15**) DOM | Mínimo | Técnico | Fácil | v1 | 
-| (**R16**) Almacenamiento en el lado del cliente | Mínimo | Técnico | Fácil | v1 | 
-| (**R17**) Alpine.js | Mínimo | Técnico | Fácil | v1 | 
-| (**R18**) Utilización de AJAX | Mínimo | Técnico | Fácil | v1 | 
-| (**R19**) ECMAScript2015 (ES6) | Mínimo | Técnico | Fácil | v1 | 
-| (**R20**) PHP | Mínimo | Técnico | Fácil | v1 | 
-| (**R21**) Laravel Framework | Mínimo | Técnico | Fácil | v1 | 
-| (**R22**) PostgreSQL | Mínimo | Técnico | Fácil | v1 | 
-| (**R23**) Cloud computing | Mínimo | Técnico | Fácil | v1 | 
-| (**R24**) Pruebas funcionales | Mínimo | Técnico | Fácil | v1 | 
-| (**R25**) Aplicación escalable | Mínimo | Técnico | Fácil | v1 | 
-| (**R26**) Etiquetas semánticas de HTML5 | Mínimo | Técnico | Fácil | v1 | 
-| (**R27**) Presentación mediante CSS | Mínimo | Técnico | Fácil | v1 | 
-| (**R28**) Diseño flexible | Mínimo | Técnico | Fácil | v1 | 
-| (**R29**) Transiciones, transformaciones, animaciones y contenido multimedia | Mínimo | Técnico | Fácil | v1 | 
-| (**R30**) Validación HTML5, CSS3 y accesibilidad | Mínimo | Técnico | Fácil | v1 | 
-| (**R31**) Diseño para varias resoluciones | Mínimo | Técnico | Fácil | v1 | 
-| (**R32**) Varios navegadores | Mínimo | Técnico | Fácil | v1 | 
-| (**R33**) Despliegue en un servidor local | Mínimo | Técnico | Fácil | v1 | 
-| (**R34**) Acceso desde Cliente Virtual | Mínimo | Técnico | Fácil | v1 | 
-| (**R35**) Creación de migraciones | Importante | Técnico | Fácil | v1 | 
-| (**R36**) Creación de los modelos y sus relaciones | Importante | Técnico | Fácil | v1 | 
-| (**R37**) Creación de seeders | Importante | Técnico | Fácil | v2 | 
-| (**R38**) Crear base de datos | Importante | Información | Fácil | v1 | 
-| (**R39**) Añadir usuarios | Importante | Funcional | Fácil | v1 | 
-| (**R40**) Eliminar usuarios | Importante | Funcional | Fácil | v2 | 
-| (**R41**) Modificar usuario | Importante | Funcional | Fácil | v1 | 
-| (**R42**) Registrarse | Importante | Funcional | Fácil | v1 | 
-| (**R43**) Inicio de sesión | Importante | Funcional | Fácil | v1 | 
-| (**R44**) Cerrar sesión | Importante | Funcional | Fácil | v1 | 
-| (**R45**) Modificar datos de usuario | Importante | Funcional | Fácil | v2 | 
-| (**R46**) Cambiar contraseña | Opcional | Funcional | Media | v2 | 
-| (**R47**) Buscar producto | Importante | Funcional | Fácil | v1 | 
-| (**R48**) Filtrar búsqueda | Importante | Funcional | Fácil | v1 | 
-| (**R49**) Subir producto | Importante | Funcional | Fácil | v1 | 
-| (**R50**) Poner precio | Importante | Funcional | Fácil | v1 | 
-| (**R51**) Tipo de producto | Importante | Funcional | Fácil | v1 | 
-| (**R52**) Cambiar precio | Importante | Funcional | Fácil | v1 | 
-| (**R53**) Eliminar producto | Importante | Funcional | Fácil | v1 | 
-| (**R54**) Añadir descripción | Importante | Funcional | Fácil | v1 | 
-| (**R55**) Editar producto | Importante | Funcional | Fácil | v1 | 
-| (**R56**) Chat en tiempo real | Importante | Técnico | Difícil | v3 | 
-| (**R57**) Ver usuario | Importante | Funcional | Fácil | v1 | 
-| (**R58**) Valorar usuario | Opcional | Funcional | Media | v2 | 
-| (**R59**) Marcar producto | Importante | Funcional | Fácil | v1 | 
-| (**R60**) Añadir foto perfil | Importante | Funcional | Media | v2 | 
-| (**R61**) Hosting en la nube | Importante | Técnico | Fácil | v1 | 
-| (**R62**) Añadir producto al host | Importante | Funcional | Media | v1 | 
-| (**R63**) Modificar producto en el host | Importante | Funcional | Media | v2 | 
-| (**R64**) Eliminar producto del host | Importante | Funcional | Media | v2 | 
-| (**R65**) Añadir fotos producto al host | Importante | Funcional | Media | v2 | 
-| (**R66**) Eliminar fotos de producto del host | Importante | Funcional | Media | v2 | 
-| (**R67**) Modificar fotos de producto del host | Importante | Funcional | Media | v2 | 
-| (**R68**) Geolocalización | Opcional | Funcional | Difícil | v3 | 
-| (**R69**) Ver productos cercanos | Opcional | Funcional | Difícil | v3 | 
-| (**R70**) Añadir producto a Favoritos | Opcional | Funcional | Media | v2 | 
-| (**R71**) Eliminar producto de Favoritos | Opcional | Funcional | Media | v2 | 
-| (**R72**) Ver lista Favoritos | Importante | Funcional | Fácil | v2 | 
-| (**R73**) Crear cuenta Administrador | Opcional | Funcional | Media | v2 | 
-| (**R74**) Darse de baja | Opcional | Funcional | Fácil | v2 | 
+| **Requisito** | **Prioridad** | **Tipo** | **Complejidad** | **Entrega** | **Incidencia** |
+| :------------ | :-----------: | :------: | :-------------: | :---------: | :------------: |
+| (**R1**) Requisitos como incidencias | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [1](https://github.com/maradriatico/WeebApp/issues/1) |
+| (**R2**) Código fuente | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [2](https://github.com/maradriatico/WeebApp/issues/2) |
+| (**R3**) Estilo del código | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [3](https://github.com/maradriatico/WeebApp/issues/3) |
+| (**R4**) Tres lanzamientos | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [4](https://github.com/maradriatico/WeebApp/issues/4) |
+| (**R5**) README.md | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [5](https://github.com/maradriatico/WeebApp/issues/5) |
+| (**R6**) Documentación | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [6](https://github.com/maradriatico/WeebApp/issues/6) |
+| (**R7**) Incidencias en GitHub | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [7](https://github.com/maradriatico/WeebApp/issues/7) |
+| (**R8**) Etiquetas e hitos | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [8](https://github.com/maradriatico/WeebApp/issues/8) |
+| (**R9**) Rama master | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [9](https://github.com/maradriatico/WeebApp/issues/9) |
+| (**R10**) Gestión del proyecto | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [10](https://github.com/maradriatico/WeebApp/issues/10) |
+| (**R11**) Final de cada iteración | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [11](https://github.com/maradriatico/WeebApp/issues/11) |
+| (**R12**) Validación de formularios | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [12](https://github.com/maradriatico/WeebApp/issues/12) |
+| (**R13**) Gestión de ventanas | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [13](https://github.com/maradriatico/WeebApp/issues/13) |
+| (**R14**) Manejo de eventos | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [14](https://github.com/maradriatico/WeebApp/issues/14) |
+| (**R15**) DOM | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [15](https://github.com/maradriatico/WeebApp/issues/15) |
+| (**R16**) Almacenamiento en el lado del cliente | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [16](https://github.com/maradriatico/WeebApp/issues/16) |
+| (**R17**) Alpine.js | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [17](https://github.com/maradriatico/WeebApp/issues/17) |
+| (**R18**) Utilización de AJAX | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [18](https://github.com/maradriatico/WeebApp/issues/18) |
+| (**R19**) ECMAScript2015 (ES6) | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [19](https://github.com/maradriatico/WeebApp/issues/19) |
+| (**R20**) PHP | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [20](https://github.com/maradriatico/WeebApp/issues/20) |
+| (**R21**) Laravel Framework | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [21](https://github.com/maradriatico/WeebApp/issues/21) |
+| (**R22**) PostgreSQL | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [22](https://github.com/maradriatico/WeebApp/issues/22) |
+| (**R23**) Cloud computing | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [23](https://github.com/maradriatico/WeebApp/issues/23) |
+| (**R24**) Pruebas funcionales | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [24](https://github.com/maradriatico/WeebApp/issues/24) |
+| (**R25**) Aplicación escalable | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [25](https://github.com/maradriatico/WeebApp/issues/25) |
+| (**R26**) Etiquetas semánticas de HTML5 | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [26](https://github.com/maradriatico/WeebApp/issues/26) |
+| (**R27**) Presentación mediante CSS | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [27](https://github.com/maradriatico/WeebApp/issues/27) |
+| (**R28**) Diseño flexible | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [28](https://github.com/maradriatico/WeebApp/issues/28) |
+| (**R29**) Transiciones, transformaciones, animaciones y contenido multimedia | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [29](https://github.com/maradriatico/WeebApp/issues/29) |
+| (**R30**) Validación HTML5, CSS3 y accesibilidad | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [30](https://github.com/maradriatico/WeebApp/issues/30) |
+| (**R31**) Diseño para varias resoluciones | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [31](https://github.com/maradriatico/WeebApp/issues/31) |
+| (**R32**) Varios navegadores | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [32](https://github.com/maradriatico/WeebApp/issues/32) |
+| (**R33**) Despliegue en un servidor local | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [33](https://github.com/maradriatico/WeebApp/issues/33) |
+| (**R34**) Acceso desde Cliente Virtual | Mínimo | Técnico | Fácil | v1 | | **Incidencia**  | [34](https://github.com/maradriatico/WeebApp/issues/34) |
+| (**R35**) Creación de migraciones | Importante | Técnico | Fácil | v1 | | **Incidencia**  | [35](https://github.com/maradriatico/WeebApp/issues/35) |
+| (**R36**) Creación de los modelos y sus relaciones | Importante | Técnico | Fácil | v1 | | **Incidencia**  | [36](https://github.com/maradriatico/WeebApp/issues/36) |
+| (**R37**) Creación de seeders | Importante | Técnico | Fácil | v2 | | **Incidencia**  | [37](https://github.com/maradriatico/WeebApp/issues/37) |
+| (**R38**) Crear base de datos | Importante | Información | Fácil | v1 | | **Incidencia**  | [38](https://github.com/maradriatico/WeebApp/issues/38) |
+| (**R39**) Añadir usuarios | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [39](https://github.com/maradriatico/WeebApp/issues/39) |
+| (**R40**) Eliminar usuarios | Importante | Funcional | Fácil | v2 | | **Incidencia**  | [40](https://github.com/maradriatico/WeebApp/issues/40) |
+| (**R41**) Modificar usuario | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [41](https://github.com/maradriatico/WeebApp/issues/41) |
+| (**R42**) Registrarse | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [42](https://github.com/maradriatico/WeebApp/issues/42) |
+| (**R43**) Inicio de sesión | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [43](https://github.com/maradriatico/WeebApp/issues/43) |
+| (**R44**) Cerrar sesión | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [44](https://github.com/maradriatico/WeebApp/issues/44) |
+| (**R45**) Modificar datos de usuario | Importante | Funcional | Fácil | v2 | | **Incidencia**  | [45](https://github.com/maradriatico/WeebApp/issues/45) |
+| (**R46**) Cambiar contraseña | Opcional | Funcional | Media | v2 | | **Incidencia**  | [46](https://github.com/maradriatico/WeebApp/issues/46) |
+| (**R47**) Buscar producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [47](https://github.com/maradriatico/WeebApp/issues/47) |
+| (**R48**) Filtrar búsqueda | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [48](https://github.com/maradriatico/WeebApp/issues/48) |
+| (**R49**) Subir producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [49](https://github.com/maradriatico/WeebApp/issues/49) |
+| (**R50**) Poner precio | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [50](https://github.com/maradriatico/WeebApp/issues/50) |
+| (**R51**) Tipo de producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [51](https://github.com/maradriatico/WeebApp/issues/51) |
+| (**R52**) Cambiar precio | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [52](https://github.com/maradriatico/WeebApp/issues/52) |
+| (**R53**) Eliminar producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [53](https://github.com/maradriatico/WeebApp/issues/53) |
+| (**R54**) Añadir descripción | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [54](https://github.com/maradriatico/WeebApp/issues/54) |
+| (**R55**) Editar producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [55](https://github.com/maradriatico/WeebApp/issues/55) |
+| (**R56**) Chat en tiempo real | Importante | Técnico | Difícil | v3 | | **Incidencia**  | [56](https://github.com/maradriatico/WeebApp/issues/56) |
+| (**R57**) Ver usuario | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [57](https://github.com/maradriatico/WeebApp/issues/57) |
+| (**R58**) Valorar usuario | Opcional | Funcional | Media | v2 | | **Incidencia**  | [58](https://github.com/maradriatico/WeebApp/issues/58) |
+| (**R59**) Marcar producto | Importante | Funcional | Fácil | v1 | | **Incidencia**  | [59](https://github.com/maradriatico/WeebApp/issues/59) |
+| (**R60**) Añadir foto perfil | Importante | Funcional | Media | v2 | | **Incidencia**  | [60](https://github.com/maradriatico/WeebApp/issues/60) |
+| (**R61**) Hosting en la nube | Importante | Técnico | Fácil | v1 | | **Incidencia**  | [61](https://github.com/maradriatico/WeebApp/issues/61) |
+| (**R62**) Añadir producto al host | Importante | Funcional | Media | v1 | | **Incidencia**  | [62](https://github.com/maradriatico/WeebApp/issues/62) |
+| (**R63**) Modificar producto en el host | Importante | Funcional | Media | v2 | | **Incidencia**  | [63](https://github.com/maradriatico/WeebApp/issues/63) |
+| (**R64**) Eliminar producto del host | Importante | Funcional | Media | v2 | | **Incidencia**  | [64](https://github.com/maradriatico/WeebApp/issues/64) |
+| (**R65**) Añadir fotos producto al host | Importante | Funcional | Media | v2 | | **Incidencia**  | [65](https://github.com/maradriatico/WeebApp/issues/65) |
+| (**R66**) Eliminar fotos de producto del host | Importante | Funcional | Media | v2 | | **Incidencia**  | [66](https://github.com/maradriatico/WeebApp/issues/66) |
+| (**R67**) Modificar fotos de producto del host | Importante | Funcional | Media | v2 | | **Incidencia**  | [67](https://github.com/maradriatico/WeebApp/issues/67) |
+| (**R68**) Geolocalización | Opcional | Funcional | Difícil | v3 | | **Incidencia**  | [68](https://github.com/maradriatico/WeebApp/issues/68) |
+| (**R69**) Ver productos cercanos | Opcional | Funcional | Difícil | v3 | | **Incidencia**  | [69](https://github.com/maradriatico/WeebApp/issues/69) |
+| (**R70**) Añadir producto a Favoritos | Opcional | Funcional | Media | v2 | | **Incidencia**  | [70](https://github.com/maradriatico/WeebApp/issues/70) |
+| (**R71**) Eliminar producto de Favoritos | Opcional | Funcional | Media | v2 | | **Incidencia**  | [71](https://github.com/maradriatico/WeebApp/issues/71) |
+| (**R72**) Ver lista Favoritos | Importante | Funcional | Fácil | v2 | | **Incidencia**  | [72](https://github.com/maradriatico/WeebApp/issues/72) |
+| (**R73**) Crear cuenta Administrador | Opcional | Funcional | Media | v2 | | **Incidencia**  | [73](https://github.com/maradriatico/WeebApp/issues/73) |
+| (**R74**) Darse de baja | Opcional | Funcional | Fácil | v2 | | **Incidencia**  | [74](https://github.com/maradriatico/WeebApp/issues/74) |
