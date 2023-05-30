@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductoRequest;
 use App\Http\Requests\UpdateProductoRequest;
+use App\Models\Categoria;
+use App\Models\Estado;
 use App\Models\Producto;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ProductoController extends Controller
 {
@@ -15,7 +19,11 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $parm = request('s');
+        $productos = Producto::where('nombre', 'like', "%$parm%")->get();
+        return view('productos.index', [
+            'productos' => $productos,
+        ]);
     }
 
     /**
@@ -23,9 +31,19 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(User $user)
     {
-        //
+        $usuario = Auth::user($user);
+        $producto = new Producto();
+        $categorias = Categoria::all();
+        $estados = Estado::all();
+
+        return view('productos.create', [
+            'producto' => $producto,
+            'usuario' => $usuario,
+            'categorias' => $categorias,
+            'estados' => $estados
+        ]);
     }
 
     /**
@@ -36,7 +54,11 @@ class ProductoController extends Controller
      */
     public function store(StoreProductoRequest $request)
     {
-        //
+        $validados = $request->validated();
+        $producto = new Producto($validados);
+        $producto->save();
+
+        return redirect()->route('user.index')->with('success', 'Producto creado con éxito');
     }
 
     /**
