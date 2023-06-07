@@ -19,7 +19,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $parm = request('s');
+        $parm = request('');
         $productos = Producto::where('nombre', 'like', "%$parm%")->get();
         return view('productos.index', [
             'productos' => $productos,
