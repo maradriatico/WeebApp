@@ -19,7 +19,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $parm = request('s');
+        $parm = request('');
         $productos = Producto::where('nombre', 'like', "%$parm%")->get();
         return view('productos.index', [
             'productos' => $productos,
@@ -58,7 +58,7 @@ class ProductoController extends Controller
         $producto = new Producto($validados);
         $producto->save();
 
-        return redirect()->route('user.index')->with('success', 'Producto creado con éxito');
+        return redirect()->route('productos.index')->with('success', 'Producto creado con éxito');
     }
 
     /**

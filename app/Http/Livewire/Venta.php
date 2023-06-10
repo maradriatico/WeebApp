@@ -4,12 +4,12 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Producto extends Component
+class Venta extends Component
 {
     public $productos;
     
     public function render()
     {
-        return view('livewire.producto');
+        return view('livewire.venta');
     }
 }
