@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\Livewire\Vendidos;
+use App\Http\Livewire\Venta;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Livewire::component('venta', Venta::class);
+        Livewire::component('vendidos', Vendidos::class);
     }
 }

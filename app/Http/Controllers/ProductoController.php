@@ -58,7 +58,7 @@ class ProductoController extends Controller
         $producto = new Producto($validados);
         $producto->save();
 
-        return redirect()->route('user.index')->with('success', 'Producto creado con éxito');
+        return redirect()->route('productos.index')->with('success', 'Producto creado con éxito');
     }
 
     /**
