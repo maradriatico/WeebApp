@@ -1,4 +1,6 @@
 <div class="row flex flex-wrap">
+
+    {{$componente}}
     @foreach ($productos as $prod)
         <a href="{{route('productos.show', $prod->id)}}">
             <div class="bg-orange-200 item col-xs-4 col-lg-4 m-2">
@@ -14,11 +16,14 @@
                     </div>
 
                     <div class="text-left">
-                        <p>{{ $prod->nombre }}sssss</p>
+                        <p>{{ $prod->nombre }}sssssss</p>
                     </div>
+
+
 
                 </div>
             </div>
         </a>
     @endforeach
+    {{-- <button wire:click="$set('componenteActual', 'vendidos')" wire:model="componenteActual" >Productos vendidos</button> --}}
 </div>
