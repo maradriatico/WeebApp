@@ -30,15 +30,16 @@
                 {{-- @livewire('venta', ['productos'=>$productos]) --}}
 
 
-                
 
+                @livewire($componenteActual, ['productos'=>$productos])
 
-                <div class="p-6 bg-white border-b border-gray-200 hover:bg-gray-100">
+                {{-- <div class="p-6 bg-white border-b border-gray-200 hover:bg-gray-100">
                     <button wire:click="$set('componenteActual', 'venta')" wire:model="componenteActual" >Productos en venta</button>
                     <button wire:click="$set('componenteActual', 'vendidos')" wire:model="componenteActual" >Productos vendidos</button>
 
-                    @livewire($componenteActual, ['productos'=>$productos])
-                </div>
+                    Debo investigar si va dentro o no de un mismo div para que funcione. Limpia esta basura arfavó
+
+                </div> --}}
                 {{-- @if ($componenteActual === 'venta')
                     @livewire('venta', ['productos'=>$productos])
                 @elseif ($componenteActual === 'vendidos')
