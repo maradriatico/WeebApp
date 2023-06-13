@@ -70,7 +70,7 @@ x-data="{open:false,menu:false, lokasi:false}">
                     <x-dropdown-link >
                             {{ __('Mi Perfil') }}
                     </x-dropdown-link>
-                    <x-dropdown-link >
+                    <x-dropdown-link :href="route('profile.edit')" >
                             {{ __('Ajustes') }}
                     </x-dropdown-link>
                     <form method="POST" action="{{ route('logout') }}">
@@ -120,7 +120,7 @@ x-data="{open:false,menu:false, lokasi:false}">
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
-                <x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Ajustes') }}
                 </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">

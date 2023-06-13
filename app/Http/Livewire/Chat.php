@@ -6,6 +6,9 @@ use App\Models\Chat as ModelsChat;
 use App\Models\ChatMensaje;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Pusher\Pusher;
+use App\Events\enviar;
+
 
 class Chat extends Component
 {
@@ -14,6 +17,8 @@ class Chat extends Component
     public $productoId;
     public $mensaje;
     public $conver;
+    public $mensajes = [];
+
 
     public function mount($receptorId, $productoId, $conver)
     {
@@ -21,43 +26,69 @@ class Chat extends Component
         $this->receptorId = $receptorId;
         $this->productoId = $productoId;
         $this->conver = $conver;
+
+        $this->actualizar();
     }
 
-    public function render()
+    public function actualizar()
     {
-        $chat = ModelsChat::all()->whereIn('id', $this->conver)[1];
-
-        //dd($chat->mensajes());
-
-        $mensajes = [];
+        $chat = ModelsChat::where('id', $this->conver)->first();
 
         if ($chat) {
-            $mensajes = $chat->mensajes()->orderBy('created_at')->get();
+
+            $this->mensajes = $chat->mensajes()->orderBy('created_at')->get();
         }
 
+        //Event::listen(enviar::class, function ($event) {
 
-        return view('livewire.chat', ['mensajes' => $mensajes]);
+           /*  $mensaje = $event->mensaje;
+            $this->emit('enviar', $mensaje); */
+
+
+
+        //event(new enviar($mensaje));
+
     }
 
     public function enviar()
     {
-        $this->validate(['mensaje' => 'required']);
+        //$this->validate(['mensaje' => 'required']);
 
-        $chat = ModelsChat::all()->whereIn('id', $this->conver)[1];
+        //$chat = ModelsChat::all()->whereIn('id', $this->conver)[1];
+        $chat = ModelsChat::where('id', $this->conver)->first();
 
-        // if (!$chat) {
-        //     $chat = ModelsChat::create(['producto_id' => $this->productoId]);
-        //     $chat->users()->attach([$this->emisorId, $this->receptorId]);
-        // }
-
-        ChatMensaje::create([
+        $mensaje = new ChatMensaje([
             'chat_id' => $chat->id,
             'emisor_id' => $this->emisorId,
             'receptor_id' => $this->receptorId,
             'mensaje' => $this->mensaje,
         ]);
 
+        $chat->mensajes()->save($mensaje);
+
+        event(new enviar($mensaje));
+
+
+        //$mensajes = $chat->mensajes()->orderBy('created_at')->get();
+
+        //$this->emitTo('chat', 'actualizar', $mensajes->toArray());
+
+
+        $pusher = new Pusher(
+            config('broadcasting.connections.pusher.key'),
+            config('broadcasting.connections.pusher.secret'),
+            config('broadcasting.connections.pusher.app_id'),
+            config('broadcasting.connections.pusher.options')
+        );
+
+        $pusher->trigger('chat-channel', 'message-sent', ['mensaje' => $mensaje]);
+
         $this->mensaje = '';
+    }
+
+    public function render()
+    {
+        return view('livewire.chat', ['mensajes' => $this->mensajes]);
     }
 
 

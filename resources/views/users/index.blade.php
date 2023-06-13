@@ -8,7 +8,7 @@
 
             </div>
 
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg flex">
+           {{--  <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg flex">
                 <li class="flex ">
                     <ul>
                         <div class="p-6 bg-white border-b border-gray-200 hover:bg-gray-100">
@@ -21,7 +21,7 @@
                         </div>
                     </ul>
                 </li>
-            </div>
+            </div> --}}
 
             <div class="bg-white">
                 {{-- Esto deberia cambiar dependiendo de la eleccion superior --}}
@@ -30,8 +30,8 @@
                 {{-- @livewire('venta', ['productos'=>$productos]) --}}
 
 
-
-                @livewire($componenteActual, ['productos'=>$productos])
+               {{--  {{$componenteActual}}
+                @livewire( "$componenteActual", ['productos'=>$productos]) --}}
 
                 {{-- <div class="p-6 bg-white border-b border-gray-200 hover:bg-gray-100">
                     <button wire:click="$set('componenteActual', 'venta')" wire:model="componenteActual" >Productos en venta</button>

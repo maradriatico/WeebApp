@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $componenteActual = 'vendidos';
+        $componenteActual = 'venta';
 
         return view('users.index', [
             'productos' => Auth::user()->productos,

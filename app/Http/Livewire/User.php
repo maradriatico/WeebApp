@@ -10,13 +10,16 @@ use App\Http\Livewire\Vendidos;
 class User extends Component
 {
     public $perfil;
+    public $componente;
+    public $componenteActual;
 
-    //public $componenteActual = 'vendidos';
 
-    // public function cambiarComponente($nuevoComponente)
-    //     {
-    //         $this->componenteActual = $nuevoComponente;
-    //     }
+    public function cambiarComponente($nuevoComponente)
+         {
+            //dd($this->componente);
+            //$this->componenteActual = $nuevoComponente;
+            $this->emitTo('vendidos', 'setComponente', $nuevoComponente);
+         }
 
     public function render()
     {
