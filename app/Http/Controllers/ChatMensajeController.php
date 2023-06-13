@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\StoreChatMensajeRequest;
 use App\Http\Requests\UpdateChatMensajeRequest;
+use App\Models\Chat;
 use App\Models\ChatMensaje;
+use App\Models\Producto;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ChatMensajeController extends Controller
 {
@@ -15,7 +21,18 @@ class ChatMensajeController extends Controller
      */
     public function index()
     {
-        //
+        $usuario = Auth::id();
+        //$chats = DB::select("select chat_id from chat_mensajes where emisor_id = $usuario or receptor_id = $usuario group by chat_id");
+        //$chats = DB::table('chats')->where('dueño_id', $usuario)->where('interesado_id', $usuario)->groupBy('id')->get();
+        $dueño = Chat::all()->whereIn('dueño_id', $usuario);
+        $chats = Chat::all()->whereIn('interesado_id', $usuario)->union($dueño);
+
+        //$chats = Chat::all();
+        //dd($chats);
+
+        return view('chats.index', [
+            'chats' => $chats
+        ]);
     }
 
     /**
@@ -42,12 +59,23 @@ class ChatMensajeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ChatMensaje  $chatMensaje
+     * @param  \App\Models\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function show(ChatMensaje $chatMensaje)
+    public function show(Chat $chat)
     {
-        //
+        $emisorId = Auth::id();
+        $receptorId = $chat->otro->id;
+        $productoId = $chat->producto_id;
+        //dd($emisorId, $receptorId, $productoId);
+        //dd($chat);
+
+        return view('chats.show', [
+            'productoId' => $productoId,
+            'receptorId' => $receptorId,
+            'emisorId' => $emisorId,
+            'conver' => $chat->id
+        ]);
     }
 
     /**

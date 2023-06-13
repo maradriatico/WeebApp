@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ChatMensajeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,5 +39,9 @@ Route::middleware('auth')->group(function () {
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
 
 Route::resource('user', UserController::class)->middleware(['auth']);
+
+Route::resource('chat', ChatMensajeController::class)->middleware(['auth']);
+
+
 
 require __DIR__.'/auth.php';
