@@ -3,7 +3,7 @@
     <a href="{{route('productos.show', $prod->id)}}">
         <div class="bg-orange-200 item col-xs-4 col-lg-4 m-2">
             <div class="thumbnail p-3">
-                <img class="group list-group-image h-52 " src="{{asset('image.png')}}" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
+                <img class="group list-group-image h-52 " src="{{$prod->fotos->foto_1}}" {{-- src="{{ $prod->image }}" --}} alt="No hay na" />
                 <div class="caption">
                     <b>{{ $prod->nombre }}</b>
                     <div class="row">

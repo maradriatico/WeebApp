@@ -1,6 +1,6 @@
 <div>
     <div>
-
+        Conversación con {{$mensajes[0]->chat->otro->name}}
         @foreach ($mensajes as $mensaje)
             <div>
                 <strong>From:</strong> {{ $mensaje->emisor_id }}
@@ -20,6 +20,7 @@
         <button type="submit">Enviar </button>
 
     <script>
+        
 
         Pusher.logToConsole = true;
 

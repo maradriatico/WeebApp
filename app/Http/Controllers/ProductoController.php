@@ -7,8 +7,10 @@ use App\Http\Requests\UpdateProductoRequest;
 use App\Models\Categoria;
 use App\Models\Estado;
 use App\Models\Producto;
+use App\Models\ProductoFoto;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProductoController extends Controller
 {
@@ -54,9 +56,19 @@ class ProductoController extends Controller
      */
     public function store(StoreProductoRequest $request)
     {
+        //Creación del producto
         $validados = $request->validated();
         $producto = new Producto($validados);
         $producto->save();
+
+        //Añadir imagen al producto
+        $imagen = $validados['foto']->store("public/prod/{$producto->id}");
+        $url = Storage::url($imagen);
+
+        ProductoFoto::create([
+            'producto_id' => $producto->id,
+            'foto_1' => $url,
+        ]);
 
         return redirect()->route('productos.index')->with('success', 'Producto creado con éxito');
     }
