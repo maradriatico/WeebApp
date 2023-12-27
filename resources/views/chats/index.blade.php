@@ -5,8 +5,8 @@
             <div>
                 {{-- @dd($chats) --}}
                 @foreach ($chats as $chat)
-                <a href="/chat/{{$chat->id}}">
-                    <div class="w-full md:w-1/2 lg:w-1/3 border">
+                    <div class="w-full md:w-1/2 lg:w-1/3 border bg-gray-500">
+                        <a href="/chat/{{$chat->id}}">
                         <div class="flex flex-col space-y-4">
                             <!-- Item -->
                             <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
@@ -23,9 +23,13 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
-                </a>
                 @endforeach
+
+                <div class="">
+                    Chat derecho
+                </div>
             </div>
         </div>
     </div>

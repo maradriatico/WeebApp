@@ -33,4 +33,9 @@ class Producto extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function fotos()
+    {
+        return $this->hasOne(ProductoFoto::class, 'producto_id');
+    }
 }

@@ -1,6 +1,6 @@
 <x-productos>
     <form action="{{ route('productos.store', [], false) }}" method="POST"
-          {{-- enctype="multipart/form-data" --}}>
+          enctype="multipart/form-data">
         @csrf
         @method('POST')
         <div class="mb-6">
@@ -65,6 +65,23 @@
                 @endforeach
             </select>
             @error('estado_id')
+                <p class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+            <label for="Foto"
+                class="text-sm font-medium text-gray-900 block mb-2 @error('Foto') text-red-500 @enderror">
+                Foto
+            </label>
+
+            <input type="file" name="foto" accept="image/*">
+            <input type="file" name="foto" accept="image/*">
+            <input type="file" name="foto" accept="image/*">
+
+            @error('foto')
                 <p class="text-red-500 text-sm mt-1">
                     {{ $message }}
                 </p>
