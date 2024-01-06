@@ -29,7 +29,11 @@ class StoreProductoRequest extends FormRequest
             'categoria_id' => 'required|exists:categorias,id',
             'estado_id' => 'required|exists:estados,id',
             'precio' => 'required|numeric', //minimo y maximo
-            'foto' => 'required|image',
+            'foto_1' => 'required|image',
+            'foto_2' => 'image',
+            'foto_3' => 'image',
+            'foto_4' => 'image',
+            'foto_5' => 'image',
             'descripcion' => 'required|string',
         ];
     }

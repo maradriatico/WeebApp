@@ -57,17 +57,55 @@ class ProductoController extends Controller
     public function store(StoreProductoRequest $request)
     {
         //Creación del producto
+
+            //$comprobar = $request->file('foto_1');
+            //return $comprobar[0];
+
         $validados = $request->validated();
+            //dd($validados);
+
         $producto = new Producto($validados);
         $producto->save();
 
         //Añadir imagen al producto
-        $imagen = $validados['foto']->store("public/prod/{$producto->id}");
-        $url = Storage::url($imagen);
+
+                            //OPTIMIZAR CON BUCLES
+        $url_2 = '';
+        $url_3 = '';
+        $url_4 = '';
+        $url_5 = '';
+
+        $foto_1 = $validados['foto_1']->store("public/prod/{$producto->id}");
+        $url_1 = Storage::url($foto_1);
+
+        if (array_key_exists("foto_2", $validados) ) {
+            $foto_2 = $validados['foto_2']->store("public/prod/{$producto->id}");
+            $url_2 = Storage::url($foto_2);
+        }
+
+        if (array_key_exists("foto_3", $validados) ) {
+            $foto_3 = $validados['foto_3']->store("public/prod/{$producto->id}");
+            $url_3 = Storage::url($foto_3);
+        }
+
+        if (array_key_exists("foto_4", $validados) ) {
+            $foto_4 = $validados['foto_4']->store("public/prod/{$producto->id}");
+            $url_4 = Storage::url($foto_4);
+        }
+
+        if (array_key_exists("foto_5", $validados) ) {
+            $foto_5 = $validados['foto_5']->store("public/prod/{$producto->id}");
+            $url_5 = Storage::url($foto_5);
+        }
+
 
         ProductoFoto::create([
             'producto_id' => $producto->id,
-            'foto_1' => $url,
+            'foto_1' => $url_1,
+            'foto_2' => $url_2,
+            'foto_3' => $url_3,
+            'foto_4' => $url_4,
+            'foto_5' => $url_5,
         ]);
 
         return redirect()->route('productos.index')->with('success', 'Producto creado con éxito');
