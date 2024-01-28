@@ -38,6 +38,10 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('productos', ProductoController::class)->middleware(['auth']);
 
+Route::get('/productos/{producto}/marcar', [ProductoController::class, 'marcar']);
+
+Route::get('/productos/{producto}/vender', [ProductoController::class, 'vender']);
+
 Route::resource('user', UserController::class)->middleware(['auth']);
 
 Route::resource('chat', ChatMensajeController::class)->middleware(['auth']);
