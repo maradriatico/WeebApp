@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreProductoRequest;
 use App\Http\Requests\UpdateProductoRequest;
 use App\Models\Categoria;
+use App\Models\Chat;
 use App\Models\Estado;
 use App\Models\Producto;
 use App\Models\ProductoFoto;
 use App\Models\User;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -22,7 +24,8 @@ class ProductoController extends Controller
     public function index()
     {
         $parm = request('');
-        $productos = Producto::where('nombre', 'like', "%$parm%")->get();
+        $productos = Producto::all()->whereNull('vendido'); //->where('nombre','like', $parm);   //Busca los productos donde 'vendido' esté vacío
+        //$productos = Producto::where('nombre', 'like', "%$parm%")->get();
         return view('productos.index', [
             'productos' => $productos,
         ]);
@@ -157,4 +160,31 @@ class ProductoController extends Controller
     {
         //
     }
+
+    public function marcar(Producto $producto)
+    {
+        //Comprobaciones
+        if (Auth::user() != $producto->user) {
+            return redirect('/user')->with('error', 'No eres el propietario de ese producto');
+        }
+
+        $chats = Chat::all()->where('producto_id', $producto->id);
+
+        return view('productos.marcar', [
+            'producto' => $producto,
+            'chats' => $chats,
+        ]);
+    }
+
+
+    public function vender(Producto $producto)
+    {
+        //Pendiente de darle utilidad al usuario comprador
+
+        $producto->vendido = true;
+        $producto->save();
+        return redirect('/user')->with('success', 'Producto marcado como vendido');
+
+    }
+
 }
