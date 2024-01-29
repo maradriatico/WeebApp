@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Livewire\Venta;
-use App\Http\Livewire\Vendidos;
 
 class UserController extends Controller
 {
@@ -17,14 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $componenteActual = 'venta';
-
-        return view('users.index', [
-            'productos' => Auth::user()->productos,
+        return view('livewire.user', [
             'perfil' => Auth::user(),
-            'componenteActual' => $componenteActual,
-            'venta' => Venta::class,
-            'vendidos' => Vendidos::class,
         ]);
     }
 

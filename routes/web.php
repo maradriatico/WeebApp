@@ -4,6 +4,8 @@ use App\Http\Controllers\ChatMensajeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\Padre;
+use App\Http\Livewire\User;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +45,8 @@ Route::get('/productos/{producto}/marcar', [ProductoController::class, 'marcar']
 Route::get('/productos/{producto}/vender', [ProductoController::class, 'vender']);
 
 Route::resource('user', UserController::class)->middleware(['auth']);
+
+Route::get('/user', User::class)->middleware(['auth']);
 
 Route::resource('chat', ChatMensajeController::class)->middleware(['auth']);
 

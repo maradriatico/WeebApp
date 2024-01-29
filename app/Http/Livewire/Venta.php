@@ -2,25 +2,17 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Producto;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Venta extends Component
 {
-    public $productos;
-    public $componente;
-
-    protected $listeners = ['setComponente'];
-
-    public function setComponente($nuevoComponente){
-
-        $this->componente = $nuevoComponente;
-        //dd($nuevoComponente);
-
-    }
-
-
     public function render()
     {
-        return view('livewire.venta');
+        $productos = Producto::all()->where('user_id', Auth::user()->id)->whereNull('vendido');
+        return view('livewire.venta', [
+            'productos' => $productos
+        ]);
     }
 }
