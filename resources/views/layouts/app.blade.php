@@ -15,7 +15,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
-        
+
 
     </head>
     <body class="font-sans antialiased">
