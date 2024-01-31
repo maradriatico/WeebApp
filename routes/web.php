@@ -4,6 +4,7 @@ use App\Http\Controllers\ChatMensajeController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Livewire\ChatPadre;
 use App\Http\Livewire\Padre;
 use App\Http\Livewire\User;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -48,7 +49,10 @@ Route::resource('user', UserController::class)->middleware(['auth']);
 
 Route::get('/user', User::class)->middleware(['auth']);
 
-Route::resource('chat', ChatMensajeController::class)->middleware(['auth']);
+Route::get('/chat', ChatPadre::class)->middleware(['auth']);
+
+
+//Route::resource('chat', ChatMensajeController::class)->middleware(['auth']);
 
 
 
