@@ -54,9 +54,11 @@ class ChatHijo extends Component
     public function render()
     {
         $chat = Chat::all()->firstWhere('id', $this->contenido);
+        $yo = Auth::id();
 
         return view('livewire.chat-hijo', [
             'chat'=> $chat,
+            'yo' => $yo,
         ]);
     }
 }
