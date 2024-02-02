@@ -40,7 +40,7 @@ class ChatPadre extends Component
         $chats = Chat::all()->whereIn('interesado_id', $usuario)->union($dueño);
         /* dd($this); */
 
-        return view('livewire.chat-padre', [
+        return view('livewire.chat-padre2', [
             'chats' => $chats
         ]);
     }

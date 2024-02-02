@@ -1,15 +1,14 @@
 <div>
     <div id="ventana-chat" wire:poll.2s="actualizar">
-        Conversación con {{$chat->otro->name}}
+        <b>Conversación con {{$chat->otro->name}} sobre {{$chat->producto->nombre}}</b>
+        <br>
         @foreach ($mensajes as $mensaje)
-            <div>
-                <strong>From:</strong> {{ $mensaje->emisor_id }}
+            <div class=" mb-4 @if ($mensaje->emisor_id == $yo) text-right @else text-left @endif ">
+                <strong class="p-2 mb-2 rounded shadow max-w-sm @if ($mensaje->emisor_id == $yo) bg-blue-500 @else bg-gray-300 @endif ">
+                    {{ $mensaje->mensaje }}
+                </strong>
                 <br>
-                <strong>To:</strong> {{ $mensaje->receptor_id }}
-                <br>
-                <strong>Mensaje:</strong> {{ $mensaje->mensaje }}
             </div>
-            <hr>
         @endforeach
     </div>
 
