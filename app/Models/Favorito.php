@@ -11,6 +11,8 @@ class Favorito extends Model
 
     protected $table = 'favoritos';
 
+    public $fillable = ['user_id', 'producto_id'];
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

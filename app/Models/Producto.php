@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Producto extends Model
 {
@@ -17,6 +18,18 @@ class Producto extends Model
     public function favoritos()
     {
         return $this->hasMany(Favorito::class);
+    }
+
+    public function esFavorito()
+    {
+        $variable = $this->favoritos->where('user_id', Auth::id());
+
+        if (empty($variable->first())) {
+            return false;
+        }
+
+        return true;
+
     }
 
     public function categoria()

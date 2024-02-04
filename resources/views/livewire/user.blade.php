@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-white h-full min-h-screen pb-10">
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-white h-full pb-10">
     <div>
         <div class="flex p-8">
             <img class="w-20" src="{{asset('foto-perfil.jpg')}}" alt="foto de perfil">

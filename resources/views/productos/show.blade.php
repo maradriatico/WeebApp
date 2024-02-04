@@ -62,11 +62,29 @@
                 </div>
             </a>
             <div class="flex">
-                <a href="#" class="px-3 py-2 rounded-md text-sm bg-orange-500 leading-5 font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Chats </a>
+                <a href="#" class="px-3 py-2 rounded-md text-sm bg-orange-400 leading-5 font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Chats </a>
 
-                <div class="font-semibold text-4xl"><a href={{'/favoritos/create/' . $producto->id}}><svg class="h-8 w-8 text-red-500"   fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                  </svg></a></div>
+                <div class="font-semibold text-4xl pl-3 pt-1">
+                    @if ($producto->esFavorito())
+
+                        <a href={{"/favoritos/$producto->id/destroy"}}>
+                            <svg class="w-7 h-7 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="m12.7 20.7 6.2-7.1c2.7-3 2.6-6.5.8-8.7A5 5 0 0 0 16 3c-1.3 0-2.7.4-4 1.4A6.3 6.3 0 0 0 8 3a5 5 0 0 0-3.7 1.9c-1.8 2.2-2 5.8.8 8.7l6.2 7a1 1 0 0 0 1.4 0Z"/>
+                            </svg>
+                        </a>
+
+                    @else
+
+                        <a href={{"/favoritos/$producto->id/create"}}>
+                            <svg class="w-7 h-7 text-red-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"/>
+                            </svg>
+                        </a>
+
+                    @endif
+
+
+                </div>
             </div>
             <div class="font-semibold text-3xl right">{{$producto->nombre}}</div>
             <div class="font-semibold text-2xl">{{$producto->precio}}€</div>
@@ -79,3 +97,4 @@
 </div>
 
 </x-app-layout>
+
