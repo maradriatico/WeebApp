@@ -5,72 +5,35 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFavoritoRequest;
 use App\Http\Requests\UpdateFavoritoRequest;
 use App\Models\Favorito;
+use App\Models\Producto;
+use Illuminate\Support\Facades\Auth;
 
 class FavoritoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Producto $producto)
     {
-        //
-    }
+        if ($producto->user_id != Auth::id()) {
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreFavoritoRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreFavoritoRequest $request)
-    {
-        //
-    }
+            if ($producto->esFavorito()) {
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Favorito $favorito)
-    {
-        //
-    }
+                return back()->with('error', 'Este producto ya se encuentra en tus Favoritos');
+            }
+            
+            Favorito::create([
+                'user_id' => Auth::id(),
+                'producto_id' => $producto->id,
+            ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Favorito $favorito)
-    {
-        //
-    }
+            return back()->with('success', 'Producto añadido a Favoritos');
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateFavoritoRequest  $request
-     * @param  \App\Models\Favorito  $favorito
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateFavoritoRequest $request, Favorito $favorito)
-    {
-        //
+        return back()->with('error', 'No puedes añadir a Favoritos tu propio producto');
+
     }
 
     /**
@@ -79,8 +42,16 @@ class FavoritoController extends Controller
      * @param  \App\Models\Favorito  $favorito
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Favorito $favorito)
+    public function destroy(Producto $producto)
     {
-        //
+        if ($producto->esFavorito()) {
+
+            $favorito = $producto->favoritos->where('user_id', Auth::id())->first();
+            $favorito->delete();
+            return back()->with('success', 'Producto eliminado de Favoritos');
+
+        } else {
+            return back()->with('error', 'El producto seleccionado no está en un lista de Favoritos');
+        }
     }
 }
