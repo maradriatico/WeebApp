@@ -55,7 +55,7 @@
     <div>
         <br>
         <div class="grid grid-cols-2 gap-x-52 gap-y-4 place-content-between">
-            <a href="{{route('user.show', $producto->user_id)}}">
+            <a href={{"/user/$producto->user_id"}}>
                 <div class="flex">
                     <img class="w-10" src="{{ asset('foto-perfil.jpg')}}" alt="">
                     <div class="ml-2 text-3xl">{{$producto->user->name}}</div>

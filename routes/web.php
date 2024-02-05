@@ -51,10 +51,7 @@ Route::get('/favoritos/{producto}/create', [FavoritoController::class, 'create']
 
 Route::get('/favoritos/{producto}/destroy', [FavoritoController::class, 'destroy'])->middleware(['auth']);
 
-
-Route::resource('user', UserController::class)->middleware(['auth']);
-
-Route::get('/user', User::class)->middleware(['auth']);
+Route::get('/user/{user}', User::class)->middleware(['auth']);
 
 Route::get('/chat', ChatPadre::class)->middleware(['auth']);
 
