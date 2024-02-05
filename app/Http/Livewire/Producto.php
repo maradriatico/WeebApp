@@ -36,7 +36,7 @@ class Producto extends Component
         }
 
         if ($this->estado) {
-            $this->productos = $this->productos->where('estado_id', $this->categoria);
+            $this->productos = $this->productos->where('estado_id', $this->estado);
         }
 
 
