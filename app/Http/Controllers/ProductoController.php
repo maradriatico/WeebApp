@@ -17,21 +17,6 @@ use Illuminate\Support\Facades\Storage;
 class ProductoController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $parm = request('');
-        $productos = Producto::all()->whereNull('vendido'); //->where('nombre','like', $parm);   //Busca los productos donde 'vendido' esté vacío
-        //$productos = Producto::where('nombre', 'like', "%$parm%")->get();
-        return view('productos.index', [
-            'productos' => $productos,
-        ]);
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
