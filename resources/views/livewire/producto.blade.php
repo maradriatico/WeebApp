@@ -1,7 +1,7 @@
 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 min-h-screen pb-10">
 
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-
+        {{-- BUSQUEDA Y FILTRADO DEL PRODUCTO --}}
         <div class="flex p-4 justify-center sm:justify-evenly bg-orange-100">
             <form wire:submit.prevent="actualizarBusqueda" class="flex flex-col md:flex-row gap-3">
                 <div class="flex">
@@ -10,14 +10,14 @@
                     <button type="submit" class="bg-green-400 text-black rounded-r px-2 md:px-3 py-0 md:py-1">Buscar</button>
                 </div>
                 <select type="text" wire:model="categoria"
-                    class="w-full h-10 border-2 border-sky-500 focus:outline-none focus:border-sky-500 text-sky-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+                    class="w-full h-10 border-2 border-gray-500 focus:outline-none focus:border-gray-500 text-gray-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
                     <option selected>Categoria</option>
                     @foreach ($lcategorias as $categori)
                         <option value="{{$categori->id}}">{{$categori->denominacion}}</option>
                     @endforeach
                 </select>
                 <select type="text" wire:model="estado"
-                    class="w-full h-10 border-2 border-sky-500 focus:outline-none focus:border-sky-500 text-sky-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+                    class="w-full h-10 border-2 border-gray-500 focus:outline-none focus:border-gray-500 text-gray-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
                     <option selected>Estado</option>
                     @foreach ($lestados as $estatus)
                         <option value="{{$estatus->id}}">{{$estatus->tipo}}</option>
@@ -30,6 +30,8 @@
         </div>
 
         <br>
+
+        {{-- RESULTADO DE LA BÚSQUEDA --}}
 
         <div class="row flex flex-wrap">
 
