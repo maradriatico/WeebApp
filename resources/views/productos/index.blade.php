@@ -12,7 +12,6 @@
 
                 @livewire('producto', ['productos'=>$productos])
 
-
             </div>
         </div>
     </div>

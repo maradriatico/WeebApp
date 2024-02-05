@@ -2,13 +2,13 @@
 <nav
 class="z-0 relative"
 x-data="{open:false,menu:false, lokasi:false}">
-  <div class="relative z-10 bg-orange-300 shadow">
+  <div class="relative z-10 bg-orange-400 shadow">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center px-2 lg:px-0">
           <a class="flex-shrink-0" href="/productos">
-            <img class="block lg:hidden h-12 w-16" src="{{ asset('logo.jpeg')}}" alt="Logo">
-            <img class="hidden lg:block h-16 w-auto" src="{{ asset('logo.jpeg')}}" alt="Logo">
+            <img class="block lg:hidden h-12 w-16" src="{{ asset('logo.png')}}" alt="Logo">
+            <img class="hidden lg:block h-16 w-auto" src="{{ asset('logo.png')}}" alt="Logo">
           </a>
           <div class="hidden lg:block lg:ml-2">
             <div class="flex">
@@ -113,10 +113,10 @@ x-data="{open:false,menu:false, lokasi:false}">
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <a ><div class="px-4">
+            <div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div></a>
+            </div>
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->

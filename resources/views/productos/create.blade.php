@@ -31,7 +31,7 @@
                 @foreach ($categorias as $categoria)
                     <option value="{{$categoria->id}}">{{$categoria->denominacion}}</option>
                 @endforeach
-        </select>
+            </select>
             @error('categoria_id')
                 <p class="text-red-500 text-sm mt-1">
                     {{ $message }}
