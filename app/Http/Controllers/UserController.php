@@ -13,12 +13,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   /*  public function index()
     {
         return view('livewire.user', [
             'perfil' => Auth::user(),
         ]);
-    }
+    } */
 
     /**
      * Show the form for creating a new resource.
@@ -49,7 +49,12 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        if ($user->id == Auth::id()) {
+
+            return redirect('/user');
+        }
+
+        dd('Negativoooo');
     }
 
     /**

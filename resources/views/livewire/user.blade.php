@@ -4,6 +4,9 @@
             <img class="w-20" src="{{asset('foto-perfil.jpg')}}" alt="foto de perfil">
             <h2 class="font-semibold m-2 text-2xl">{{$perfil->name}}</h2>
         </div>
+        @if ($perfil->id == $yo)
+
+
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg flex">
             <li class="flex ">
                 <ul>
@@ -20,9 +23,10 @@
                 </ul>
             </li>
         </div>
+        @endif
         <div class="bg-white pb-10">
             @if($componente === 'venta')
-                @livewire('venta')
+                @livewire('venta', ['perfil' => $perfil])
             @elseif($componente === 'vendidos')
                 @livewire('vendidos')
             @endif
