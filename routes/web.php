@@ -4,7 +4,6 @@ use App\Http\Controllers\FavoritoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
-use App\Http\Livewire\ChatPadre;
 use App\Http\Livewire\Chats;
 use App\Http\Livewire\Favoritos;
 use App\Http\Livewire\Producto;

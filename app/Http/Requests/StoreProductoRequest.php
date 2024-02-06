@@ -28,12 +28,12 @@ class StoreProductoRequest extends FormRequest
             'user_id' => 'required|exists:users,id',
             'categoria_id' => 'required|exists:categorias,id',
             'estado_id' => 'required|exists:estados,id',
-            'precio' => 'required|numeric', //minimo y maximo
-            'foto_1' => 'required|image',
-            'foto_2' => 'image',
-            'foto_3' => 'image',
-            'foto_4' => 'image',
-            'foto_5' => 'image',
+            'precio' => 'required|numeric|min:1|max:99999',
+            'foto_1' => 'required|image|mimes:jpeg,png|max:5000',
+            'foto_2' => 'image|mimes:jpeg,png|max:5000',
+            'foto_3' => 'image|mimes:jpeg,png|max:5000',
+            'foto_4' => 'image|mimes:jpeg,png|max:5000',
+            'foto_5' => 'image|mimes:jpeg,png|max:5000',
             'descripcion' => 'required|string',
         ];
     }
