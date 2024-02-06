@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                             <div class="flex-none px-4 py-2 text-stone-600 text-xs md:text-sm">
-                                17m ago
+                                {{ $chat->mensajes->last()->updated_at->format('d/m - H:i') }}
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="flex-1 p-4 overflow-y-auto">
             @if ($contenido)
-                @livewire('chat-hijo', ['contenido' => $contenido], key($contenido))
+                @livewire('mensajes', ['contenido' => $contenido], key($contenido))
             @else
                 <h1>Selecciona una conversación</h1>
             @endif
