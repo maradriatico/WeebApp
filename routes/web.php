@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Livewire\ChatPadre;
+use App\Http\Livewire\Chats;
 use App\Http\Livewire\Favoritos;
 use App\Http\Livewire\Producto;
 use App\Http\Livewire\User;
@@ -44,19 +45,16 @@ Route::resource('productos', ProductoController::class)->middleware(['auth']);
 Route::get('/productos', Producto::class)->middleware(['auth']);
 
 Route::get('/productos/{producto}/marcar', [ProductoController::class, 'marcar'])->middleware(['auth']);
-
 Route::get('/productos/{producto}/vender', [ProductoController::class, 'vender'])->middleware(['auth']);
 
+Route::get('/favoritos', Favoritos::class)->middleware(['auth']);
 Route::get('/favoritos/{producto}/create', [FavoritoController::class, 'create'])->middleware(['auth']);
-
 Route::get('/favoritos/{producto}/destroy', [FavoritoController::class, 'destroy'])->middleware(['auth']);
 
 Route::get('/user/{user}', User::class)->middleware(['auth']);
 
-Route::get('/chat', ChatPadre::class)->middleware(['auth']);
-
-Route::get('/favoritos', Favoritos::class)->middleware(['auth']);
-
+Route::get('/chat', Chats::class)->middleware(['auth']);
+Route::get('/chat/{producto}', Chats::class)->middleware(['auth']);
 
 
 

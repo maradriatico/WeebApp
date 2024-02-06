@@ -7,7 +7,7 @@ use App\Models\ChatMensaje;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
-class ChatHijo extends Component
+class Mensajes extends Component
 {
     public $contenido;
     public $mensajes = [];
@@ -46,7 +46,9 @@ class ChatHijo extends Component
             'mensaje' => $this->mensaje,
         ]);
 
+
         $chat->mensajes()->save($mensaje);
+        $chat->save();
         $this->actualizar();
         $this->mensaje = '';
     }
@@ -56,7 +58,7 @@ class ChatHijo extends Component
         $chat = Chat::all()->firstWhere('id', $this->contenido);
         $yo = Auth::id();
 
-        return view('livewire.chat-hijo', [
+        return view('livewire.mensajes', [
             'chat'=> $chat,
             'yo' => $yo,
         ]);

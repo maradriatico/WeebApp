@@ -62,7 +62,7 @@
                 </div>
             </a>
             <div class="flex">
-                <a href="#" class="px-3 py-2 rounded-md text-sm bg-orange-400 leading-5 font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Chats </a>
+                <a href="/chat/{{$producto->id}}" class="px-3 py-2 rounded-md text-sm bg-orange-400 leading-5 font-medium text-gray-800 font-semibold hover:bg-orange-500 hover:text-white transition duration-150 ease-in-out cursor-pointer focus:outline-none focus:text-white focus:bg-gray-700 "> Chats </a>
 
                 <div class="font-semibold text-4xl pl-3 pt-1">
                     @if ($producto->esFavorito())

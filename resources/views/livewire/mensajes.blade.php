@@ -17,7 +17,5 @@
     <form wire:submit.prevent="enviar">
         <input wire:model="mensaje" type="text" placeholder="Escribe tu mensaje">
         <button type="submit">Enviar </button>
-
-
 </div>
 
