@@ -45,7 +45,7 @@
                 Precio
             </label>
             <input type="text" name="precio" id="precio"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 @error('precio') border-red-500 @enderror"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 @error('precio') border-red-500 @enderror"
                 value="{{ old('precio', $producto->precio) }}">
             @error('precio')
                 <p class="text-red-500 text-sm mt-1">
@@ -78,13 +78,42 @@
                 Fotos
             </label>
 
-            <input type="file" name="foto_1" accept="image/*">
-            <input type="file" name="foto_2" accept="image/*">
-            <input type="file" name="foto_3" accept="image/*">
-            <input type="file" name="foto_4" accept="image/*">
-            <input type="file" name="foto_5" accept="image/*">
+            <input type="file" name="foto_1" id="foto_1" accept="image/*"
+                    onchange="habilitarSiguiente(this, 'foto_2')">
+
+            <input type="file" name="foto_2" id="foto_2" accept="image/*"
+                    onchange="habilitarSiguiente(this, 'foto_3')" class="form-input hidden" disabled>
+                    
+            <input type="file" name="foto_3" id="foto_3" accept="image/*"
+                    onchange="habilitarSiguiente(this, 'foto_4')" class="form-input hidden" disabled>
+
+            <input type="file" name="foto_4" id="foto_4" accept="image/*"
+                    onchange="habilitarSiguiente(this, 'foto_5')" class="form-input hidden" disabled>
+
+            <input type="file" name="foto_5" id="foto_5" accept="image/*"
+                    class="form-input hidden" disabled>
 
             @error('foto_1')
+                <p class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </p>
+            @enderror
+            @error('foto_2')
+                <p class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </p>
+            @enderror
+            @error('foto_3')
+                <p class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </p>
+            @enderror
+            @error('foto_4')
+                <p class="text-red-500 text-sm mt-1">
+                    {{ $message }}
+                </p>
+            @enderror
+            @error('foto_5')
                 <p class="text-red-500 text-sm mt-1">
                     {{ $message }}
                 </p>
@@ -107,12 +136,21 @@
             @enderror
         </div>
         <button type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Enviar</button>
+            class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Enviar</button>
 
         <a href="/"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Atrás</a>
+            class="text-white bg-gray-500 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Atrás</a>
     </form>
     </div>
+
+    <script>
+        function habilitarSiguiente(inputActual, siguienteInputId) {
+            if (inputActual.files.length > 0) {
+                document.getElementById(siguienteInputId).classList.remove('hidden');
+                document.getElementById(siguienteInputId).disabled = false;
+            }
+        }
+    </script>
     {{-- <div class="container mx-auto p-8">
         <form action="{{ route('productos.store', [], false) }}" method="POST" enctype="multipart/form-data"
               class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto bg-white p-8 rounded-md shadow-md">

@@ -13,7 +13,7 @@ class UpdateProductoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,21 @@ class UpdateProductoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nombre' => 'required|string|max:30',
+            'user_id' => 'required|exists:users,id',
+            'categoria_id' => 'required|exists:categorias,id',
+            'estado_id' => 'required|exists:estados,id',
+            'precio' => 'required|numeric|min:1|max:99999',
+            'descripcion' => 'required|string|max:255',
+            'foto_2' => 'image|mimes:jpeg,png|max:5000',
+            'foto_3' => 'image|mimes:jpeg,png|max:5000',
+            'foto_4' => 'image|mimes:jpeg,png|max:5000',
+            'foto_5' => 'image|mimes:jpeg,png|max:5000',
+            'cambio_1' => 'image|mimes:jpeg,png|max:5000',
+            'cambio_2' => 'image|mimes:jpeg,png|max:5000',
+            'cambio_3' => 'image|mimes:jpeg,png|max:5000',
+            'cambio_4' => 'image|mimes:jpeg,png|max:5000',
+            'cambio_5' => 'image|mimes:jpeg,png|max:5000',
         ];
     }
 }

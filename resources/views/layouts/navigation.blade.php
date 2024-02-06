@@ -97,16 +97,16 @@ x-data="{open:false,menu:false, lokasi:false}">
     </div>
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link>
+            <x-responsive-nav-link href="/user/{{Auth::id()}}">
                 {{ __('Mis Productos') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link >
                 {{ __('¡Sube tu producto!') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link >
+            <x-responsive-nav-link href="/favoritos">
                 {{ __('Favoritos') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link>
+            <x-responsive-nav-link href="/chat">
                 {{ __('Chats') }}
             </x-responsive-nav-link>
         </div>
@@ -120,7 +120,7 @@ x-data="{open:false,menu:false, lokasi:false}">
 
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link href="route('profile.edit')">
                     {{ __('Ajustes') }}
                 </x-responsive-nav-link>
                 <form method="POST" action="{{ route('logout') }}">
