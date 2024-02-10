@@ -24,7 +24,7 @@
             </div>
             @endforeach
         </div>
-        <div class="flex-1 p-4 overflow-y-auto">
+        <div class="flex-1 p-4">
             @if ($contenido)
                 @livewire('mensajes', ['contenido' => $contenido], key($contenido))
             @else

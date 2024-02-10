@@ -29,11 +29,11 @@ class StoreProductoRequest extends FormRequest
             'categoria_id' => 'required|exists:categorias,id',
             'estado_id' => 'required|exists:estados,id',
             'precio' => 'required|numeric|min:1|max:99999',
-            'foto_1' => 'required|image|mimes:jpeg,png|max:5000',
-            'foto_2' => 'image|mimes:jpeg,png|max:5000',
-            'foto_3' => 'image|mimes:jpeg,png|max:5000',
-            'foto_4' => 'image|mimes:jpeg,png|max:5000',
-            'foto_5' => 'image|mimes:jpeg,png|max:5000',
+            'foto_1' => 'required|image|mimes:png,jpg|max:5000',
+            'foto_2' => 'image|mimes:png,jpg|max:5000',
+            'foto_3' => 'image|mimes:png,jpg|max:5000',
+            'foto_4' => 'image|mimes:png,jpg|max:5000',
+            'foto_5' => 'image|mimes:png,jpg|max:5000',
             'descripcion' => 'required|string',
         ];
     }

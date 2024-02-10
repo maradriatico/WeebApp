@@ -9,7 +9,7 @@
         <div class="">
             @foreach ($chats as $chat)
                     <div class="w-full md:w-1/2 lg:w-1/3 border bg-gray-400">
-                        <a href="/productos/8/vender">
+                        <a href="/productos/{{$chat->producto_id}}/vender">
                         <div class="flex flex-col space-y-4">
                             <!-- Item -->
                             <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
@@ -25,7 +25,7 @@
                     </div>
                 @endforeach
                 <div class="w-full md:w-1/2 lg:w-1/3 border bg-gray-400">
-                    <a href="#">
+                    <a href="/productos/{{$producto->id}}/vender">
                     <div class="flex flex-col space-y-4">
                         <!-- Item -->
                         <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">

@@ -56,10 +56,10 @@ class ProductoController extends Controller
         //Añadir imagen al producto
 
                             //OPTIMIZAR CON BUCLES
-        $url_2 = '';
-        $url_3 = '';
-        $url_4 = '';
-        $url_5 = '';
+        $url_2 = null;
+        $url_3 = null;
+        $url_4 = null;
+        $url_5 = null;
 
         $foto_1 = $validados['foto_1']->store("public/prod/{$producto->id}");
         $url_1 = Storage::url($foto_1);
@@ -94,7 +94,7 @@ class ProductoController extends Controller
             'foto_5' => $url_5,
         ]);
 
-        return redirect()->route('/productos')->with('success', 'Producto creado con éxito');
+        return redirect('/productos')->with('success', 'Producto creado con éxito');
     }
 
     /**
@@ -267,7 +267,7 @@ class ProductoController extends Controller
 
         $producto->vendido = true;
         $producto->save();
-        return redirect('/user')->with('success', 'Producto marcado como vendido');
+        return redirect("/user/$producto->user_id")->with('success', 'Producto marcado como vendido');
 
     }
 
