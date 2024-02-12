@@ -18,7 +18,7 @@
 
             {{-- Comprobamos si es o no favorito, para cambiar el relleno y la función del corazon --}}
 
-            @if ($producto->id == Auth::id())
+            @if ($producto->user_id != Auth::id())
 
                 @if ($producto->esFavorito())
 
@@ -40,17 +40,32 @@
             @endif
         </div>
         <p class="text-gray-800 font-bold text-lg">{{ $producto->precio }} €</p>
-        <div class="p-2 flex justify-around border border-t-2">
-            <a href="/productos/{{$producto->id}}/marcar"><svg class="h-8 w-8 text-red-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg></a>
-            <form action="{{route('productos.destroy', [$producto])}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" onclick="return confirm('¿Deseas borrar tu producto?')">
-                    <svg class="h-8 w-8 text-black"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="4" y1="7" x2="20" y2="7" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" />  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
-                </button>
-            </form>
-            <a href="/productos/{{$producto->id}}/edit"><svg class="h-8 w-8 text-red-600"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  <line x1="16" y1="5" x2="19" y2="8" /></svg></a>
-        </div>
+        @if ($producto->user_id != Auth::id())
+
+            <p class="text-gray-600 mt-2 text-sm overflow-hidden" style="text-overflow: ellipsis; white-space: nowrap;">{{ $producto->descripcion }}</p>
+
+        @else
+            <br>
+            <div class="p-2 flex justify-around border border-t-2 bg-orange-100">
+                <a href="/productos/{{$producto->id}}/marcar" class="flex flex-col items-center">
+                    <svg class="h-8 w-8 text-gray-800"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg> ¡Vendido!</a>
+                <form action="{{route('productos.destroy', [$producto])}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" onclick="return confirm('¿Deseas borrar tu producto?')" class="flex flex-col items-center">
+                        <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                        </svg>
+                        Borrar
+                    </button>
+                </form>
+                <a href="/productos/{{$producto->id}}/edit" class="flex flex-col items-center">
+                    <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.3 4.8 2.9 2.9M7 7H4a1 1 0 0 0-1 1v10c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-4.5m2.4-10a2 2 0 0 1 0 3l-6.8 6.8L8 14l.7-3.6 6.9-6.8a2 2 0 0 1 2.8 0Z"/>
+                  </svg> Editar</a>
+            </div>
+        @endif
     </div>
     @endforeach
 </div>
+

@@ -61,26 +61,26 @@ class ProductoController extends Controller
         $url_4 = null;
         $url_5 = null;
 
-        $foto_1 = $validados['foto_1']->store("public/prod/{$producto->id}");
+        $foto_1 = $validados['foto_1']->storeAs("public/prod/{$producto->id}", 'foto_1.jpg');
         $url_1 = Storage::url($foto_1);
 
         if (array_key_exists("foto_2", $validados) ) {
-            $foto_2 = $validados['foto_2']->store("public/prod/{$producto->id}");
+            $foto_2 = $validados['foto_2']->storeAs("public/prod/{$producto->id}", 'foto_2.jpg');
             $url_2 = Storage::url($foto_2);
         }
 
         if (array_key_exists("foto_3", $validados) ) {
-            $foto_3 = $validados['foto_3']->store("public/prod/{$producto->id}");
+            $foto_3 = $validados['foto_3']->storeAs("public/prod/{$producto->id}", 'foto_3.jpg');
             $url_3 = Storage::url($foto_3);
         }
 
         if (array_key_exists("foto_4", $validados) ) {
-            $foto_4 = $validados['foto_4']->store("public/prod/{$producto->id}");
+            $foto_4 = $validados['foto_4']->storeAs("public/prod/{$producto->id}", 'foto_4.jpg');
             $url_4 = Storage::url($foto_4);
         }
 
         if (array_key_exists("foto_5", $validados) ) {
-            $foto_5 = $validados['foto_5']->store("public/prod/{$producto->id}");
+            $foto_5 = $validados['foto_5']->storeAs("public/prod/{$producto->id}", 'foto_5.jpg');
             $url_5 = Storage::url($foto_5);
         }
 
@@ -159,53 +159,53 @@ class ProductoController extends Controller
                     //Primera foto
 
         if (array_key_exists("cambio_1", $validados) ) {
-            $cambio_1 = $validados['cambio_1']->store("public/prod/{$producto->id}");
+            $cambio_1 = $validados['cambio_1']->storeAs("public/prod/{$producto->id}", 'foto_1');
             $url_1 = Storage::url($cambio_1);
         }
                     //Segunda foto
 
         if (array_key_exists("foto_2", $validados) ) {
-            $foto_2 = $validados['foto_2']->store("public/prod/{$producto->id}");
+            $foto_2 = $validados['foto_2']->storeAs("public/prod/{$producto->id}", 'foto_2');
             $url_2 = Storage::url($foto_2);
         }
 
         if (array_key_exists("cambio_2", $validados) ) {
-            $cambio_2 = $validados['cambio_2']->store("public/prod/{$producto->id}");
+            $cambio_2 = $validados['cambio_2']->storeAs("public/prod/{$producto->id}", 'foto_2');
             $url_2 = Storage::url($cambio_2);
         }
                     //Tercera foto
 
         if (array_key_exists("foto_3", $validados) ) {
-            $foto_3 = $validados['foto_3']->store("public/prod/{$producto->id}");
+            $foto_3 = $validados['foto_3']->storeAs("public/prod/{$producto->id}", 'foto_3');
             $url_3 = Storage::url($foto_3);
         }
 
         if (array_key_exists("cambio_3", $validados) ) {
-            $cambio_3 = $validados['cambio_3']->store("public/prod/{$producto->id}");
+            $cambio_3 = $validados['cambio_3']->storeAs("public/prod/{$producto->id}", 'foto_3');
             $url_3 = Storage::url($cambio_3);
         }
 
                     //Cuarta foto
 
         if (array_key_exists("foto_4", $validados) ) {
-            $foto_4 = $validados['foto_4']->store("public/prod/{$producto->id}");
+            $foto_4 = $validados['foto_4']->storeAs("public/prod/{$producto->id}", 'foto_4');
             $url_4 = Storage::url($foto_4);
         }
 
         if (array_key_exists("cambio_4", $validados) ) {
-            $cambio_4 = $validados['cambio_4']->store("public/prod/{$producto->id}");
+            $cambio_4 = $validados['cambio_4']->storeAs("public/prod/{$producto->id}", 'foto_4');
             $url_4 = Storage::url($cambio_4);
         }
 
                      //Quinta foto
 
         if (array_key_exists("foto_5", $validados) ) {
-            $foto_5 = $validados['foto_5']->store("public/prod/{$producto->id}");
+            $foto_5 = $validados['foto_5']->storeAs("public/prod/{$producto->id}", 'foto_5');
             $url_5 = Storage::url($foto_5);
         }
 
         if (array_key_exists("cambio_5", $validados) ) {
-            $cambio_5 = $validados['cambio_5']->store("public/prod/{$producto->id}");
+            $cambio_5 = $validados['cambio_5']->storeAs("public/prod/{$producto->id}", 'foto_5');
             $url_5 = Storage::url($cambio_5);
         }
 
