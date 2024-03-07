@@ -2,7 +2,7 @@
 
     @if ($productos->count() == 0)
         <div class="text-center justify-center">
-            <p>No has subido ningún producto aún. ¡Vende lo que no necesites!</p>
+            <p>Aún no has vendido nigún producto</p>
         </div>
     @endif
 
@@ -18,7 +18,7 @@
         </div>
         <p class="text-gray-800 font-bold text-lg">{{ $producto->precio }} €</p>
 
-        <a class="pt-3" href="/productos/{{$producto->producto_id}}/destroy">
+        <a class="pt-3" href="/productos/{{$producto->id}}/destroy">
             <div class="p-2 m-2 border border-5 text-center col-xs-4 col-lg-4 bg-gray-400">
                 Eliminar Producto
             </div>

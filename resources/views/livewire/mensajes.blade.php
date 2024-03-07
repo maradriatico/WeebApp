@@ -2,7 +2,7 @@
     <div id="ventana-chat" wire:poll.1s="actualizar">
         <div class="relative flex items-center justify-center p-1 rounded space-x-4 bg-orange-200 ">
             <a href="/user/{{$chat->otro->id}}" class="flex items-center">
-                <img src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144" alt="" class="w-10 sm:w-16 h-10 sm:h-16 rounded-full">
+                <img src="{{ asset('foto-perfil.jpg')}}" alt="" class="w-10 sm:w-16 h-10 sm:h-16 rounded-full">
                 <b class="text-2xl mt-1 items-center pl-3">{{$chat->otro->name}}</b>
             </a>
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">

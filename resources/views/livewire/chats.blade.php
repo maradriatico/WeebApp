@@ -8,7 +8,7 @@
                         <!-- Item -->
                         <div class="flex justify-between py-6 px-4 bg-white/30 rounded-lg">
                             <div class="flex items-center space-x-4">
-                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" class="h-20 w-20" alt="">
+                                <img src="{{ asset('foto-perfil.jpg')}}" {{-- src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" --}} class="h-20 w-20" alt="">
                                 <div class="flex flex-col text-left">
                                     <span>{{ $chat->otro->name }}</span>
                                     <span class="font-bold text-lg">{{ $chat->producto->nombre }}</span>

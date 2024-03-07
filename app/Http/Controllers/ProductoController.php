@@ -8,6 +8,7 @@ use App\Models\Categoria;
 use App\Models\Chat;
 use App\Models\ChatMensaje;
 use App\Models\Estado;
+use App\Models\Favorito;
 use App\Models\Producto;
 use App\Models\ProductoFoto;
 use App\Models\User;
@@ -238,7 +239,27 @@ class ProductoController extends Controller
     {
         if($producto->vendido){
 
-            return redirect()->back()->with('error', 'Debiste haber puesto que se borrase todo en cascada');
+            if ($producto->user_id == Auth::id()) {
+
+                ProductoFoto::where('producto_id', $producto->id)->delete();
+                Favorito::where('producto_id', $producto->id)->delete();
+                $chats = Chat::all()->where('producto_id', $producto->id);
+                foreach ($chats as $chat) {
+                    ChatMensaje::where('chat_id', $chat->id)->delete();
+                }
+                Chat::where('producto_id', $producto->id)->delete();
+
+                $producto->delete();
+
+                return redirect()->back()->with('success', 'Producto eliminado con éxito');
+
+            } else {
+                return redirect()->back()->with('error', 'No puedes eliminar un producto que no es tuyo');
+
+            }
+
+
+            //return redirect()->back()->with('error', 'Debiste haber puesto que se borrase todo en cascada');
 
         }
 

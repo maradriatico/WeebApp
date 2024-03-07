@@ -32,7 +32,7 @@
                             <div class="flex items-center space-x-4">
                                 <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" class="h-20 w-20" alt="">
                                 <div class="flex flex-col space-y-1">
-                                    <span class="font-bold text-lg">Otra persona</span>
+                                    <span class="font-bold text-lg">Persona ajena a WeebApp</span>
                                 </div>
                             </div>
                         </div>

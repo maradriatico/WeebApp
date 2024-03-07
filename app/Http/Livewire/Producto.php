@@ -27,6 +27,7 @@ class Producto extends Component
     {
         if ($this->search){
             $this->productos = $this->productos->where('nombre', $this->search);
+            //$this->productos = $this->productos->where('nombre',  'LIKE', '%' . $this->search . '%');
         } else {
             $this->mount();
         }
