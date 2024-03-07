@@ -45,6 +45,7 @@ Route::get('/productos', Producto::class)->middleware(['auth']);
 
 Route::get('/productos/{producto}/marcar', [ProductoController::class, 'marcar'])->middleware(['auth']);
 Route::get('/productos/{producto}/vender', [ProductoController::class, 'vender'])->middleware(['auth']);
+Route::get('/productos/{producto}/destroy', [ProductoController::class, 'destroy'])->middleware(['auth']);
 
 Route::get('/favoritos', Favoritos::class)->middleware(['auth']);
 Route::get('/favoritos/{producto}/create', [FavoritoController::class, 'create'])->middleware(['auth']);

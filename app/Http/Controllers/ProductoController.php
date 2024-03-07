@@ -8,6 +8,7 @@ use App\Models\Categoria;
 use App\Models\Chat;
 use App\Models\ChatMensaje;
 use App\Models\Estado;
+use App\Models\Favorito;
 use App\Models\Producto;
 use App\Models\ProductoFoto;
 use App\Models\User;
@@ -56,31 +57,31 @@ class ProductoController extends Controller
         //Añadir imagen al producto
 
                             //OPTIMIZAR CON BUCLES
-        $url_2 = '';
-        $url_3 = '';
-        $url_4 = '';
-        $url_5 = '';
+        $url_2 = null;
+        $url_3 = null;
+        $url_4 = null;
+        $url_5 = null;
 
-        $foto_1 = $validados['foto_1']->store("public/prod/{$producto->id}");
+        $foto_1 = $validados['foto_1']->storeAs("public/prod/{$producto->id}", 'foto_1.jpg');
         $url_1 = Storage::url($foto_1);
 
         if (array_key_exists("foto_2", $validados) ) {
-            $foto_2 = $validados['foto_2']->store("public/prod/{$producto->id}");
+            $foto_2 = $validados['foto_2']->storeAs("public/prod/{$producto->id}", 'foto_2.jpg');
             $url_2 = Storage::url($foto_2);
         }
 
         if (array_key_exists("foto_3", $validados) ) {
-            $foto_3 = $validados['foto_3']->store("public/prod/{$producto->id}");
+            $foto_3 = $validados['foto_3']->storeAs("public/prod/{$producto->id}", 'foto_3.jpg');
             $url_3 = Storage::url($foto_3);
         }
 
         if (array_key_exists("foto_4", $validados) ) {
-            $foto_4 = $validados['foto_4']->store("public/prod/{$producto->id}");
+            $foto_4 = $validados['foto_4']->storeAs("public/prod/{$producto->id}", 'foto_4.jpg');
             $url_4 = Storage::url($foto_4);
         }
 
         if (array_key_exists("foto_5", $validados) ) {
-            $foto_5 = $validados['foto_5']->store("public/prod/{$producto->id}");
+            $foto_5 = $validados['foto_5']->storeAs("public/prod/{$producto->id}", 'foto_5.jpg');
             $url_5 = Storage::url($foto_5);
         }
 
@@ -94,7 +95,7 @@ class ProductoController extends Controller
             'foto_5' => $url_5,
         ]);
 
-        return redirect()->route('/productos')->with('success', 'Producto creado con éxito');
+        return redirect('/productos')->with('success', 'Producto creado con éxito');
     }
 
     /**
@@ -159,53 +160,53 @@ class ProductoController extends Controller
                     //Primera foto
 
         if (array_key_exists("cambio_1", $validados) ) {
-            $cambio_1 = $validados['cambio_1']->store("public/prod/{$producto->id}");
+            $cambio_1 = $validados['cambio_1']->storeAs("public/prod/{$producto->id}", 'foto_1');
             $url_1 = Storage::url($cambio_1);
         }
                     //Segunda foto
 
         if (array_key_exists("foto_2", $validados) ) {
-            $foto_2 = $validados['foto_2']->store("public/prod/{$producto->id}");
+            $foto_2 = $validados['foto_2']->storeAs("public/prod/{$producto->id}", 'foto_2');
             $url_2 = Storage::url($foto_2);
         }
 
         if (array_key_exists("cambio_2", $validados) ) {
-            $cambio_2 = $validados['cambio_2']->store("public/prod/{$producto->id}");
+            $cambio_2 = $validados['cambio_2']->storeAs("public/prod/{$producto->id}", 'foto_2');
             $url_2 = Storage::url($cambio_2);
         }
                     //Tercera foto
 
         if (array_key_exists("foto_3", $validados) ) {
-            $foto_3 = $validados['foto_3']->store("public/prod/{$producto->id}");
+            $foto_3 = $validados['foto_3']->storeAs("public/prod/{$producto->id}", 'foto_3');
             $url_3 = Storage::url($foto_3);
         }
 
         if (array_key_exists("cambio_3", $validados) ) {
-            $cambio_3 = $validados['cambio_3']->store("public/prod/{$producto->id}");
+            $cambio_3 = $validados['cambio_3']->storeAs("public/prod/{$producto->id}", 'foto_3');
             $url_3 = Storage::url($cambio_3);
         }
 
                     //Cuarta foto
 
         if (array_key_exists("foto_4", $validados) ) {
-            $foto_4 = $validados['foto_4']->store("public/prod/{$producto->id}");
+            $foto_4 = $validados['foto_4']->storeAs("public/prod/{$producto->id}", 'foto_4');
             $url_4 = Storage::url($foto_4);
         }
 
         if (array_key_exists("cambio_4", $validados) ) {
-            $cambio_4 = $validados['cambio_4']->store("public/prod/{$producto->id}");
+            $cambio_4 = $validados['cambio_4']->storeAs("public/prod/{$producto->id}", 'foto_4');
             $url_4 = Storage::url($cambio_4);
         }
 
                      //Quinta foto
 
         if (array_key_exists("foto_5", $validados) ) {
-            $foto_5 = $validados['foto_5']->store("public/prod/{$producto->id}");
+            $foto_5 = $validados['foto_5']->storeAs("public/prod/{$producto->id}", 'foto_5');
             $url_5 = Storage::url($foto_5);
         }
 
         if (array_key_exists("cambio_5", $validados) ) {
-            $cambio_5 = $validados['cambio_5']->store("public/prod/{$producto->id}");
+            $cambio_5 = $validados['cambio_5']->storeAs("public/prod/{$producto->id}", 'foto_5');
             $url_5 = Storage::url($cambio_5);
         }
 
@@ -238,7 +239,27 @@ class ProductoController extends Controller
     {
         if($producto->vendido){
 
-            return redirect()->back()->with('error', 'Debiste haber puesto que se borrase todo en cascada');
+            if ($producto->user_id == Auth::id()) {
+
+                ProductoFoto::where('producto_id', $producto->id)->delete();
+                Favorito::where('producto_id', $producto->id)->delete();
+                $chats = Chat::all()->where('producto_id', $producto->id);
+                foreach ($chats as $chat) {
+                    ChatMensaje::where('chat_id', $chat->id)->delete();
+                }
+                Chat::where('producto_id', $producto->id)->delete();
+
+                $producto->delete();
+
+                return redirect()->back()->with('success', 'Producto eliminado con éxito');
+
+            } else {
+                return redirect()->back()->with('error', 'No puedes eliminar un producto que no es tuyo');
+
+            }
+
+
+            //return redirect()->back()->with('error', 'Debiste haber puesto que se borrase todo en cascada');
 
         }
 
@@ -267,7 +288,7 @@ class ProductoController extends Controller
 
         $producto->vendido = true;
         $producto->save();
-        return redirect('/user')->with('success', 'Producto marcado como vendido');
+        return redirect("/user/$producto->user_id")->with('success', 'Producto marcado como vendido');
 
     }
 

@@ -19,7 +19,7 @@ class Producto extends Component
 
     public function mount(){
 
-        $this->productos = ModelsProducto::whereNull('vendido')->orderBy('created_at')->get();
+        $this->productos = ModelsProducto::whereNull('vendido')->orderBy('created_at', 'desc')->get();
 
     }
 
@@ -27,6 +27,7 @@ class Producto extends Component
     {
         if ($this->search){
             $this->productos = $this->productos->where('nombre', $this->search);
+            //$this->productos = $this->productos->where('nombre',  'LIKE', '%' . $this->search . '%');
         } else {
             $this->mount();
         }
